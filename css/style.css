@@ -146,6 +146,14 @@ p {
   border-radius: 8px;
 }
 
+/* Desktop view: Make hero image smaller */
+@media (min-width: 768px) {
+  .hero-image {
+    max-width: 400px; /* Smaller size for desktop */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
 /* Content Sections */
 .content-section {
   padding: 60px 40px;
@@ -173,7 +181,7 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   text-align: center;
-  display: flex; /* Use flexbox for better alignment */
+  display: flex;Id flexbox for better alignment */
   flex-direction: column; /* Stack content vertically */
   align-items: center; /* Center horizontally */
   justify-content: space-between; /* Space content evenly */
