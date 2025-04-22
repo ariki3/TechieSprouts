@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechieSprouts - Empowering Kids Through Tech</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Header with Logo, Navigation, and CTA -->
+  <header class="site-header" aria-label="Main navigation">
+    <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="student-dashboard.html">Student Dashboard</a>
+      <a href="online-lessons.html">Online Lessons</a>
+      <a href="parent-portal.html">Parent Portal</a>
+      <a href="instructor-area.html">Instructor Area</a>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search courses..." aria-label="Search courses">
+      </div>
+    </nav>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button">Get Started</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Learn Coding the Fun Way!</h1>
+      <p class="hero-subtitle">Kids love our interactive tech lessons, and parents trust our results!</p>
+      <a href="online-lessons.html" class="cta-button">Explore Courses</a>
+      <img src="images/hero-illustration.png" alt="Kids coding with robots" class="hero-image">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="content-section">
+    <h2>About TechieSprouts</h2>
+    <div class="card-grid">
+      <div class="card">
+        <p>Spark your child’s creativity with fun, hands-on lessons in coding, game design, and digital creativity!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Kids Will Learn -->
+  <section class="content-section">
+    <h2>What Kids Will Learn</h2>
+    <div class="card-grid">
+      <div class="card">
+        <i class="fas fa-code card-icon"></i>
+        <h3>Coding & Programming</h3>
+        <p>Build apps and games with Scratch and Python.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-paint-brush card-icon"></i>
+        <h3>Web & Game Design</h3>
+        <p>Create awesome websites and video games.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-lightbulb card-icon"></i>
+        <h3>Digital Creativity</h3>
+        <p>Explore animation and storytelling with tech.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Age Groups -->
+  <section class="content-section">
+    <h2>Programs by Age</h2>
+    <div class="card-grid">
+      <div class="card">
+        <p>Fun tech lessons tailored for ages 6–8, 9–12, and 13–16.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Teaser -->
+  <section class="content-section community">
+    <h2>Join Our Techie Community!</h2>
+    <div class="card-grid">
+      <div class="card">
+        <p>Connect with young coders, share projects, and grow. Coming soon!</p>
+        <a href="#" class="cta-button">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Join our newsletter" aria-label="Newsletter email">
+        <button type="submit" class="cta-button">Subscribe</button>
+      </form>
+    </div>
+    <p>© 2025 TechieSprouts</p>
+  </footer>
+
+  <!-- JavaScript for Retracting Navigation -->
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('.site-header');
+
+    window.addEventListener('scroll', () => {
+      if (window.innerWidth <= 768) {
+        let currentScrollTop = window.scrollY;
+        if (currentScrollTop > lastScrollTop) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        lastScrollTop = currentScrollTop;
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        header.classList.remove('header-hidden');
+      }
+    });
+  </script>
+</body>
+</html>

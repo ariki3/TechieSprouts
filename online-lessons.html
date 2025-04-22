@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechieSprouts - Online Lessons</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Header with Logo, Navigation, and CTA -->
+  <header class="site-header" aria-label="Main navigation">
+    <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="student-dashboard.html">Student Dashboard</a>
+      <a href="online-lessons.html">Online Lessons</a>
+      <a href="parent-portal.html">Parent Portal</a>
+      <a href="instructor-area.html">Instructor Area</a>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search courses..." aria-label="Search courses">
+      </div>
+    </nav>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button">Get Started</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Code at Your Own Pace!</h1>
+      <p class="hero-subtitle">Fun lessons to spark creativity and tech skills!</p>
+      <img src="images/lessons-illustration.png" alt="Kids learning to code" class="hero-image">
+    </div>
+  </section>
+
+  <!-- Online Lessons Section -->
+  <section class="content-section">
+    <h2>Online Lessons (Coming Soon)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <i class="fas fa-gamepad card-icon"></i>
+        <h3>Scratch Coding</h3>
+        <p>Create your own games with Scratch’s easy drag-and-drop tools.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-laptop-code card-icon"></i>
+        <h3>Python Basics</h3>
+        <p>Start coding with Python’s simple, powerful language.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-globe card-icon"></i>
+        <h3>Web Development</h3>
+        <p>Build cool websites with HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Join our newsletter" aria-label="Newsletter email">
+        <button type="submit" class="cta-button">Subscribe</button>
+      </form>
+    </div>
+    <p>© 2025 TechieSprouts</p>
+  </footer>
+
+  <!-- JavaScript for Retracting Navigation -->
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('.site-header');
+
+    window.addEventListener('scroll', () => {
+      if (window.innerWidth <= 768) {
+        let currentScrollTop = window.scrollY;
+        if (currentScrollTop > lastScrollTop) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        lastScrollTop = currentScrollTop;
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        header.classList.remove('header-hidden');
+      }
+    });
+  </script>
+</body>
+</html>
