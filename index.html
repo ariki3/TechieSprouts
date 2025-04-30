@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechieSprouts: Fun, safe tech courses for kids to learn coding, robotics, and more!">
+  <meta name="keywords" content="kids coding, tech education, Scratch, Python, robotics">
+  <meta property="og:title" content="TechieSprouts - Empowering Kids Through Tech">
+  <meta property="og:description" content="Join TechieSprouts for interactive tech lessons for kids aged 6–16!">
+  <meta property="og:image" content="images/hero-bg.jpg">
   <title>TechieSprouts - Empowering Kids Through Tech</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Header with Logo, Navigation, and CTA -->
+  <!-- Header -->
   <header class="site-header" aria-label="Main navigation">
     <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
     <nav class="site-nav">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="student-dashboard.html">Student Dashboard</a>
       <a href="online-lessons.html">Online Lessons</a>
       <a href="parent-portal.html">Parent Portal</a>
@@ -23,15 +28,19 @@
         <input type="text" placeholder="Search courses..." aria-label="Search courses">
       </div>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Get started with TechieSprouts">Get Started</a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Learn Coding the Fun Way!</h1>
-      <p class="hero-subtitle">Kids love our interactive tech lessons, and parents trust our results!</p>
-      <a href="online-lessons.html" class="cta-button">Explore Courses</a>
+      <h1>Code, Create, and Grow! 🚀</h1>
+      <p class="hero-subtitle">Fun, safe tech lessons for kids to learn coding, robotics, and more. Trusted by parents!</p>
+      <div class="hero-ctas">
+        <a href="online-lessons.html" class="cta-button" aria-label="Explore tech courses">Explore Courses</a>
+        <a href="parent-portal.html" class="cta-button parent-cta" aria-label="Learn more for parents">For Parents</a>
+      </div>
+      <p class="safety-note">COPPA-compliant, kid-safe learning environment</p>
     </div>
   </section>
 
@@ -40,7 +49,8 @@
     <h2>About TechieSprouts</h2>
     <div class="card-grid">
       <div class="card">
-        <p>Spark your child’s creativity with fun, hands-on lessons in coding, game design, and digital creativity!</p>
+        <p>We spark creativity and build future-ready skills through hands-on tech lessons. Kids aged 6–16 learn coding, game design, and robotics in a safe, COPPA-compliant platform. Join 1,000+ young coders today!</p>
+        <a href="parent-portal.html" class="cta-button" aria-label="Learn Plants">Learn More</a>
       </div>
     </div>
   </section>
@@ -52,27 +62,67 @@
       <div class="card">
         <i class="fas fa-code card-icon"></i>
         <h3>Coding & Programming</h3>
-        <p>Build apps and games with Scratch and Python.</p>
+        <p>Build games and apps with Scratch and Python.</p>
+        <a href="online-lessons.html#scratch" class="cta-button" aria-label="Try free coding lesson">Try Free Lesson</a>
       </div>
       <div class="card">
         <i class="fas fa-paint-brush card-icon"></i>
         <h3>Web & Game Design</h3>
-        <p>Create awesome websites and video games.</p>
+        <p>Create websites with HTML/CSS and games in Roblox Studio.</p>
+        <a href="online-lessons.html#html" class="cta-button" aria-label="Try free web design lesson">Try Free Lesson</a>
       </div>
       <div class="card">
-        <i class="fas fa-lightbulb card-icon"></i>
-        <h3>Digital Creativity</h3>
-        <p>Explore animation and storytelling with tech.</p>
+        <i class="fas fa-robot card-icon"></i>
+        <h3>Robotics & AI</h3>
+        <p>Code robots with Micro:bit and explore AI basics.</p>
+        <a href="online-lessons.html#robotics" class="cta-button" aria-label="Try free robotics lesson">Try Free Lesson</a>
       </div>
     </div>
   </section>
 
-  <!-- Age Groups -->
+  <!-- Programs by Age -->
   <section class="content-section">
     <h2>Programs by Age</h2>
     <div class="card-grid">
       <div class="card">
-        <p>Fun tech lessons tailored for ages 6–8, 9–12, and 13–16.</p>
+        <img src="images/ages6-8.jpg" alt="Ages 6-8 course" class="card-image">
+        <h3>Ages 6–8</h3>
+        <p>Learn Scratch and Blockly to create fun games and animations.</p>
+        <a href="online-lessons.html#ages6-8" class="cta-button" aria-label="View courses for ages 6-8">See Courses</a>
+      </div>
+      <div class="card">
+        <img src="images/ages9-12.jpg" alt="Ages 9-12 course" class="card-image">
+        <h3>Ages 9–12</h3>
+        <p>Build websites with HTML/CSS and code in Python.</p>
+        <a href="online-lessons.html#ages9-12" class="cta-button" aria-label="View courses for ages 9-12">See Courses</a>
+      </div>
+      <div class="card">
+        <img src="images/ages13-16.jpg" alt="Ages 13-16 course" class="card-image">
+        <h3>Ages 13–16</h3>
+        <p>Explore JavaScript, robotics, and AI projects.</p>
+        <a href="online-lessons.html#ages13-16" class="cta-button" aria-label="View courses for ages 13-16">See Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="content-section">
+    <h2>What Our Sprouts Say</h2>
+    <div class="card-grid">
+      <div class="card testimonial">
+        <img src="images/avatar-kid.jpg" alt="Student avatar" class="avatar">
+        <p>“I made my own game in Scratch! It’s so cool!”</p>
+        <p><strong>– Liam, 9</strong></p>
+      </div>
+      <div class="card testimonial">
+        <img src="images/avatar-parent.jpg" alt="Parent avatar" class="avatar">
+        <p>“TechieSprouts is fun and safe for my daughter.”</p>
+        <p><strong>– Emma, Parent</strong></p>
+      </div>
+      <div class="card testimonial">
+        <img src="images/avatar-instructor.jpg" alt="Instructor avatar" class="avatar">
+        <p>“The lessons make teaching coding easy!”</p>
+        <p><strong>– Mr. Chen, Instructor</strong></p>
       </div>
     </div>
   </section>
@@ -82,8 +132,8 @@
     <h2>Join Our Techie Community!</h2>
     <div class="card-grid">
       <div class="card">
-        <p>Connect with young coders, share projects, and grow. Coming soon!</p>
-        <a href="#" class="cta-button">Learn More</a>
+        <p>Share projects, connect with young coders, and showcase your work in our kid-safe community. Launching Summer 2025!</p>
+        <a href="parent-portal.html#community" class="cta-button" aria-label="Get community updates">Get Updates</a>
       </div>
     </div>
   </section>
@@ -92,29 +142,30 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com/techiesprouts" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/techiesprouts" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/techiesprouts" aria-label="Twitter"><i class="fab fa-twitter"></iPACT</a>
       </div>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Join our newsletter" aria-label="Newsletter email">
-        <button type="submit" class="cta-button">Subscribe</button>
+      <form class="newsletter-form" data-netlify="true" name="newsletter">
+        <input type="email" name="email" placeholder="Join our newsletter" aria-label="Newsletter email" required>
+        <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
+      <p>Safe for Kids | COPPA-Compliant</p>
     </div>
     <p>© 2025 TechieSprouts</p>
   </footer>
 
-  <!-- JavaScript for Retracting Navigation -->
+  <!-- JavaScript -->
   <script>
+    // Retracting Navigation
     let lastScrollTop = 0;
     const header = document.querySelector('.site-header');
-
     window.addEventListener('scroll', () => {
       if (window.innerWidth <= 768) {
         let currentScrollTop = window.scrollY;
@@ -126,11 +177,17 @@
         lastScrollTop = currentScrollTop;
       }
     });
-
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         header.classList.remove('header-hidden');
       }
+    });
+
+    // Search Functionality (Placeholder)
+    const searchInput = document.querySelector('.search-bar input');
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      console.log('Searching for:', query); // Replace with actual search logic
     });
   </script>
 </body>
