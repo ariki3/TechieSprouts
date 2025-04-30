@@ -596,3 +596,36 @@ p {
     font-size: 12px;
   }
 }
+/* Kids’ Corner Styles */
+.kid-card {
+  padding: 16px;
+  background-color: #FFF7E6; /* Light, playful background */
+  border: 2px solid var(--accent-orange);
+}
+
+.kid-button {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  padding: 16px 32px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.kid-button:hover {
+  background-color: #6BCB1E;
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .kid-card {
+    padding: 12px;
+  }
+  .kid-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
