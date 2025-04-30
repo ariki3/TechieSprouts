@@ -3,62 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechieSprouts Instructor Area: Tools to teach coding and manage students.">
-  <meta name="keywords" content="instructor tools, kids coding, TechieSprouts, lesson plans">
-  <meta property="og:title" content="TechieSprouts - Instructor Area">
-  <meta property="og:description" content="Teach tech with ease using TechieSprouts’ Instructor Area!">
+  <meta name="description" content="TechieSprouts: Teach coding and tech to kids with our Instructor Area.">
+  <meta name="keywords" content="instructor tools, kids coding, TechieSprouts, lesson plans, Kenya">
+  <meta property="og:title" content="TechieSprouts - For Teachers">
+  <meta property="og:description" content="Teach tech with ease using TechieSprouts in Kenya!">
   <meta property="og:image" content="images/hero-bg.jpg">
-  <title>TechieSprouts - Instructor Area</title>
+  <title>TechieSprouts - For Teachers</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Header with Logo, Navigation, and CTA -->
+  <!-- Header -->
   <header class="site-header" aria-label="Main navigation">
     <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="student-dashboard.html">Student Dashboard</a>
-      <a href="online-lessons.html">Online Lessons</a>
-      <a href="parent-portal.html">Parent Portal</a>
-      <a href="instructor-area.html" class="active">Instructor Area</a>
+      <a href="student-dashboard.html">My Learning</a>
+      <a href="online-lessons.html">Fun Lessons</a>
+      <a href="parent-portal.html">For Parents</a>
+      <a href="instructor-area.html" class="active">For Teachers</a>
+      <a href="kids-corner.html">Kids’ Corner</a>
+      <div class="language-toggle">
+        <select id="language" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="sw">Swahili</option>
+        </select>
+      </div>
       <div class="search-bar">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search courses..." aria-label="Search courses">
+        <input type="text" placeholder="Find fun courses..." aria-label="Search courses">
       </div>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Get started with TechieSprouts">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start learning with TechieSprouts">Start Now</a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Teach Tech with Ease!</h1>
-      <p class="hero-subtitle">Tools to inspire and manage your students.</p>
-      <!-- Added Privacy Policy note -->
-      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act & COPPA-compliant</a></p>
+      <h1>Teach Tech the Fun Way! 🌟</h1>
+      <p class="hero-subtitle">Help kids learn coding and robotics with easy tools.</p>
+      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
     </div>
   </section>
 
   <!-- Instructor Area Section -->
   <section class="content-section">
-    <h2>Instructor Area (Coming Soon)</h2>
+    <h2>For Teachers (Coming Soon)</h2>
+    <p class="section-intro">Fundisha Teknolojia kwa Furaha! (Teach Tech with Joy!) Our lessons align with Kenya’s CBC curriculum.</p>
     <div class="card-grid">
       <div class="card">
         <i class="fas fa-book-open card-icon"></i>
-        <h3>Lesson Plans</h3>
-        <p>Create engaging coding lessons with ease.</p>
+        <h3>Fun Lesson Plans</h3>
+        <p>Create coding lessons kids love.</p>
       </div>
       <div class="card">
         <i class="fas fa-users card-icon"></i>
-        <h3>Student Management</h3>
-        <p>Track progress and manage assignments.</p>
+        < cerebell>Track Students</h3>
+        <p>See how your students are doing.</p>
       </div>
       <div class="card">
         <i class="fas fa-tools card-icon"></i>
-        <h3>Resource Library</h3>
-        <p>Access teaching tools and templates.</p>
+        <h3>Teaching Tools</h3>
+        <p>Use our guides and templates.</p>
       </div>
     </div>
   </section>
@@ -81,17 +88,16 @@
         <input type="email" name="email" placeholder="Join our newsletter" aria-label="Newsletter email" required>
         <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
-      <!-- Added COPPA note -->
-      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act and COPPA">Kenya Data Protection Act & COPPA-Compliant</a></p>
+      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act">Kenya Data Protection Act Compliant</a></p>
     </div>
     <p>© 2025 TechieSprouts</p>
   </footer>
 
-  <!-- JavaScript for Retracting Navigation -->
+  <!-- JavaScript -->
   <script>
+    // Retracting Navigation
     let lastScrollTop = 0;
     const header = document.querySelector('.site-header');
-
     window.addEventListener('scroll', () => {
       if (window.innerWidth <= 768) {
         let currentScrollTop = window.scrollY;
@@ -103,11 +109,17 @@
         lastScrollTop = currentScrollTop;
       }
     });
-
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         header.classList.remove('header-hidden');
       }
+    });
+
+    // Language Toggle (Placeholder)
+    const languageSelect = document.getElementById('language');
+    languageSelect.addEventListener('change', (e) => {
+      console.log('Language changed to:', e.target.value);
+      // TODO: Implement language switch logic
     });
   </script>
 </body>
