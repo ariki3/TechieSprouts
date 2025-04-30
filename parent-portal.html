@@ -3,63 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechieSprouts Parent Portal: Monitor your child’s coding progress and stay connected.">
-  <meta name="keywords" content="parent portal, kids coding, TechieSprouts, child progress">
-  <meta property="og:title" content="TechieSprouts - Parent Portal">
-  <meta property="og:description" content="Support your child’s tech journey with TechieSprouts’ Parent Portal!">
+  <meta name="description" content="TechieSprouts: Help your child learn coding and tech with our Parent Portal.">
+  <meta name="keywords" content="parent portal, kids coding, TechieSprouts, child progress, Kenya">
+  <meta property="og:title" content="TechieSprouts - For Parents">
+  <meta property="og:description" content="Support your child’s tech journey with TechieSprouts in Kenya!">
   <meta property="og:image" content="images/hero-bg.jpg">
-  <title>TechieSprouts - Parent Portal</title>
+  <title>TechieSprouts - For Parents</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Header with Logo, Navigation, and CTA -->
+  <!-- Header -->
   <header class="site-header" aria-label="Main navigation">
     <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="student-dashboard.html">Student Dashboard</a>
-      <a href="online-lessons.html">Online Lessons</a>
-      <a href="parent-portal.html" class="active">Parent Portal</a>
-      <a href="instructor-area.html">Instructor Area</a>
+      <a href="student-dashboard.html">My Learning</a>
+      <a href="online-lessons.html">Fun Lessons</a>
+      <a href="parent-portal.html" class="active">For Parents</a>
+      <a href="instructor-area.html">For Teachers</a>
+      <a href="kids-corner.html">Kids’ Corner</a>
+      <div class="language-toggle">
+        <select id="language" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="sw">Swahili</option>
+        </select>
+      </div>
       <div class="search-bar">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search courses..." aria-label="Search courses">
+        <input type="text" placeholder="Find fun courses..." aria-label="Search courses">
       </div>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Get started with TechieSprouts">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start learning with TechieSprouts">Start Now</a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Support Your Child’s Tech Journey!</h1>
-      <p class="hero-subtitle">Track progress and stay connected with ease.</p>
-      <!-- Added Privacy Policy note -->
-      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act & COPPA-compliant</a></p>
+      <h1>Help Your Child Learn Tech! 😊</h1>
+      <p class="hero-subtitle">See their progress and learn how to support them.</p>
+      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
     </div>
   </section>
 
   <!-- Parent Portal Section -->
   <section class="content-section">
-    <h2>Parent Portal (Coming Soon)</h2>
+    <h2>For Parents (Coming Soon)</h2>
+    <p class="section-intro">Msaada Mtoto Wako Ajifunze Teknolojia! (Help Your Child Learn Tech!)</p>
     <div class="card-grid">
       <div class="card">
         <i class="fas fa-chart-bar card-icon"></i>
-        <h3>Monitor Progress</h3>
-        <p>Track your child’s coding skills and achievements.</p>
+        <h3>Check Progress</h3>
+        <p>See how your child is doing in coding and tech.</p>
       </div>
       <div class="card">
         <i class="fas fa-envelope card-icon"></i>
-        <h3>Communicate</h3>
-        <p>Chat with instructors for updates and feedback.</p>
+        <h3>Talk to Teachers</h3>
+        <p>Get updates from instructors.</p>
       </div>
       <div class="card">
         <i class="fas fa-calendar card-icon"></i>
-        <h3>Schedule Lessons</h3>
-        <p>Manage your child’s lesson plans easily.</p>
+        <h3>Plan Lessons</h3>
+        <p>Choose the best lessons for your child.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Tech for Parents Section -->
+  <section class="content-section">
+    <h2>Tech for Non-Tech Parents</h2>
+    <div class="card">
+      <h3>What is Coding?</h3>
+      <p>Coding is like telling a computer what to do. Kids make games and websites with it!</p>
+      <h3>Do We Need a Fancy Computer?</h3>
+      <p>No! A basic computer or tablet with internet works for most lessons.</p>
+      <h3>How Can I Help My Child?</h3>
+      <p>Encourage them to try our free lessons and ask questions!</p>
+      <a href="downloads/parent-guide.pdf" class="cta-button" aria-label="Download parent guide">Download Parent Guide</a>
+    </div>
+  </section>
+
+  <!-- Parental Consent Section -->
+  <section class="content-section">
+    <h2>Parental Consent</h2>
+    <div class="card">
+      <p>Allow your child to learn with TechieSprouts. See our <a href="privacy.html" class="privacy-link">Privacy Policy</a> for details.</p>
+      <form class="consent-form" data-netlify="true" name="parental-consent">
+        <label for="child-name">Child’s Name:</label>
+        <input type="text" id="child-name" name="child-name" required>
+        <label for="parent-email">Parent Email:</label>
+        <input type="email" id="parent-email" name="parent-email" required>
+        <button type="submit" class="cta-button" aria-label="Grant parental consent">Grant Consent</button>
+      </form>
     </div>
   </section>
 
@@ -81,17 +117,16 @@
         <input type="email" name="email" placeholder="Join our newsletter" aria-label="Newsletter email" required>
         <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
-      <!-- Added COPPA note -->
-      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act and COPPA">Kenya Data Protection Act & COPPA-Compliant</a></p>
+      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act">Kenya Data Protection Act Compliant</a></p>
     </div>
     <p>© 2025 TechieSprouts</p>
   </footer>
 
-  <!-- JavaScript for Retracting Navigation -->
+  <!-- JavaScript -->
   <script>
+    // Retracting Navigation
     let lastScrollTop = 0;
     const header = document.querySelector('.site-header');
-
     window.addEventListener('scroll', () => {
       if (window.innerWidth <= 768) {
         let currentScrollTop = window.scrollY;
@@ -103,25 +138,18 @@
         lastScrollTop = currentScrollTop;
       }
     });
-
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         header.classList.remove('header-hidden');
       }
     });
+
+    // Language Toggle (Placeholder)
+    const languageSelect = document.getElementById('language');
+    languageSelect.addEventListener('change', (e) => {
+      console.log('Language changed to:', e.target.value);
+      // TODO: Implement language switch logic
+    });
   </script>
 </body>
 </html>
-<section class="content-section">
-  <h2>Parental Consent</h2>
-  <div class="card">
-    <p>Grant consent for your child to use TechieSprouts. See our <a href="privacy.html" class="privacy-link">Privacy Policy</a> for details.</p>
-    <form class="consent-form" data-netlify="true" name="parental-consent">
-      <label for="child-name">Child’s Name:</label>
-      <input type="text" id="child-name" name="child-name" required>
-      <label for="parent-email">Parent Email:</label>
-      <input type="email" id="parent-email" name="parent-email" required>
-      <button type="submit" class="cta-button" aria-label="Grant parental consent">Grant Consent</button>
-    </form>
-  </div>
-</section>
