@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechieSprouts Instructor Area: Tools to teach coding and manage students.">
+  <meta name="keywords" content="instructor tools, kids coding, TechieSprouts, lesson plans">
+  <meta property="og:title" content="TechieSprouts - Instructor Area">
+  <meta property="og:description" content="Teach tech with ease using TechieSprouts’ Instructor Area!">
+  <meta property="og:image" content="images/hero-bg.jpg">
   <title>TechieSprouts - Instructor Area</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -17,13 +22,13 @@
       <a href="student-dashboard.html">Student Dashboard</a>
       <a href="online-lessons.html">Online Lessons</a>
       <a href="parent-portal.html">Parent Portal</a>
-      <a href="instructor-area.html">Instructor Area</a>
+      <a href="instructor-area.html" class="active">Instructor Area</a>
       <div class="search-bar">
         <i class="fas fa-search"></i>
         <input type="text" placeholder="Search courses..." aria-label="Search courses">
       </div>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Get started with TechieSprouts">Get Started</a>
   </header>
 
   <!-- Hero Section -->
@@ -31,6 +36,8 @@
     <div class="hero-content">
       <h1>Teach Tech with Ease!</h1>
       <p class="hero-subtitle">Tools to inspire and manage your students.</p>
+      <!-- Added Privacy Policy note -->
+      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act & COPPA-compliant</a></p>
     </div>
   </section>
 
@@ -60,20 +67,22 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html" aria-label="View our Privacy Policy">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
       <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com/techiesprouts" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/techiesprouts" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/techiesprouts" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Join our newsletter" aria-label="Newsletter email">
-        <button type="submit" class="cta-button">Subscribe</button>
+      <form class="newsletter-form" data-netlify="true" name="newsletter">
+        <input type="email" name="email" placeholder="Join our newsletter" aria-label="Newsletter email" required>
+        <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
+      <!-- Added COPPA note -->
+      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act and COPPA">Kenya Data Protection Act & COPPA-Compliant</a></p>
     </div>
     <p>© 2025 TechieSprouts</p>
   </footer>
