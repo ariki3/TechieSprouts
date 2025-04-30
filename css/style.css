@@ -65,6 +65,8 @@ p {
   border: 1px solid var(--primary-blue);
   border-radius: 4px;
   font-size: 14px;
+  width: 100%; /* Ensure it fits in mobile */
+  max-width: 120px; /* Prevent overflow */
 }
 
 /* Navigation */
@@ -95,6 +97,7 @@ p {
   border: 1px solid var(--primary-blue);
   border-radius: 20px;
   padding: 6px 12px;
+  max-width: 200px; /* Constrain width */
 }
 
 .search-bar i {
@@ -106,7 +109,7 @@ p {
   border: none;
   outline: none;
   font-size: 14px;
-  width: 120px;
+  width: 100%; /* Full width within max-width */
 }
 
 /* CTA Button */
@@ -244,4 +247,439 @@ p {
 }
 
 .difficulty[style*="Medium"] {
-  background-color: var
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+}
+
+.difficulty[style*="Challenge"] {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--neutral-gray);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--primary-green);
+  border-radius: 5px;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  width: 40px;
+  height: 40px;
+}
+
+/* Offline Link */
+.offline-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary-blue);
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.offline-link:hover {
+  color: var(--accent-orange);
+}
+
+/* Course Filters */
+.course-filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.course-filters button {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.course-filters button:hover {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-gray);
+  padding: 40px 40px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center content */
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center links */
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  margin: 0; /* Remove margin to rely on gap */
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center; /* Center social icons */
+  gap: 12px;
+}
+
+.footer-social a {
+  color: var(--primary-blue);
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--accent-orange);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Center form */
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.footer p {
+  margin-top: 20px;
+  color: var(--text-dark);
+}
+
+.coppa-note {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center; /* Ensure centered */
+}
+
+.coppa-note .privacy-link {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+.coppa-note .privacy-link:hover {
+  color: var(--accent-orange);
+}
+
+/* Consent Form */
+.consent-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.consent-form label {
+  font-weight: 600;
+}
+
+.consent-form input {
+  padding: 10px;
+  border: 1px solid var(--neutral-gray);
+  border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 20px;
+  }
+  .site-logo {
+    width: 120px;
+    margin-bottom: 12px;
+  }
+  .site-nav {
+    flex-direction: column;
+    gap: 8px; /* Reduce gap for tighter fit */
+    margin-top: 8px;
+    width: 100%;
+    align-items: center; /* Center items */
+  }
+  .site-nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 14px; /* Smaller font for mobile */
+    padding: 6px 10px; /* Reduced padding */
+  }
+  .language-toggle {
+    margin-left: 0; /* Reset margin */
+    width: 100%;
+    max-width: 150px; /* Constrain width */
+  }
+  .search-bar {
+    width: 100%;
+    max-width: 250px; /* Constrain width */
+    justify-content: center;
+    padding: 4px 8px; /* Reduced padding */
+  }
+  .search-bar input {
+    width: 100%;
+    font-size: 12px; /* Smaller font */
+  }
+  .site-header .cta-button {
+    margin-top: 8px;
+    width: 100%;
+    max-width: 250px; /* Constrain CTA */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero {
+    padding: 60px 20px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content-section {
+    padding: 40px 20px;
+  }
+  .card {
+    padding: 12px;
+  }
+  .card-image {
+    height: 120px;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Reinforce centering */
+  }
+  .footer-links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+    gap: 8px; /* Tighter gap */
+  }
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px; /* Constrain form width */
+    align-items: center;
+  }
+  .newsletter-form input {
+    width: 100%;
+    max-width: 230px; /* Constrain input */
+  }
+  .newsletter-form button {
+    width: 100%;
+    max-width: 230px; /* Constrain button */
+  }
+  .site-header.header-hidden {
+    transform: translateY(-100%);
+  }
+}
+
+/* Course Section */
+.course-section {
+  margin-bottom: 60px;
+}
+
+.course-section h3 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.lesson-details {
+  background-color: #FFFFFF;
+  border: 2px solid var(--primary-green);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lesson-details h4 {
+  font-size: 22px;
+  color: var(--primary-blue);
+  margin-bottom: 16px;
+}
+
+.lesson-details p {
+  margin: 8px 0;
+}
+
+/* Iframe for Demos */
+.card iframe {
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .course-section h3 {
+    font-size: 24px;
+  }
+  .lesson-details {
+    padding: 16px;
+  }
+  .card iframe {
+    height: 150px;
+  }
+}
+
+/* Privacy Section */
+.privacy-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.privacy-section .card {
+  padding: 32px;
+  line-height: 1.8;
+}
+
+.privacy-section h3 {
+  font-size: 22px;
+  margin: 20px 0 10px;
+  color: var(--primary-blue);
+}
+
+.privacy-section ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.privacy-section li {
+  margin-bottom: 8px;
+}
+
+.privacy-section .privacy-link {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+.privacy-section .privacy-link:hover {
+  color: var(--accent-orange);
+}
+
+/* Hero Safety Note */
+.safety-note {
+  font-size: 14px;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Privacy Policy Link */
+.privacy-link {
+  color: #FFFFFF;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.privacy-link:hover {
+  color: var(--accent-orange);
+}
+
+/* Footer COPPA Note */
+.coppa-note {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .privacy-section {
+    padding: 40px 20px;
+  }
+  .privacy-section .card {
+    padding: 20px;
+  }
+  .safety-note {
+    font-size: 12px;
+  }
+  .coppa-note {
+    font-size: 12px;
+  }
+}
+
+/* Kids’ Corner Styles */
+.kid-card {
+  padding: 16px;
+  background-color: #FFF7E6;
+  border: 2px solid var(--accent-orange);
+}
+
+.kid-button {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  padding: 16px 32px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.kid-button:hover {
+  background-color: #6BCB1E;
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .kid-card {
+    padding: 12px;
+  }
+  .kid-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
