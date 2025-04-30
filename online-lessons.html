@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechieSprouts: Fun, safe online tech lessons for kids to learn coding, Python, and web development.">
-  <meta name="keywords" content="kids coding, Scratch, Python, web development, tech education">
-  <meta property="og:title" content="TechieSprouts - Online Lessons">
-  <meta property="og:description" content="Explore interactive tech courses for kids aged 6–16 at TechieSprouts!">
+  <meta name="description" content="TechieSprouts: Fun, safe tech lessons for kids to learn coding, robotics, and more in Kenya.">
+  <meta name="keywords" content="kids coding, Scratch, Python, web development, tech education, Kenya">
+  <meta property="og:title" content="TechieSprouts - Fun Tech Lessons">
+  <meta property="og:description" content="Explore fun tech courses for kids aged 6–16 in Kenya!">
   <meta property="og:image" content="images/hero-bg.jpg">
-  <title>TechieSprouts - Online Lessons</title>
+  <title>TechieSprouts - Fun Tech Lessons</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -19,161 +19,88 @@
     <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="student-dashboard.html">Student Dashboard</a>
-      <a href="online-lessons.html" class="active">Online Lessons</a>
-      <a href="parent-portal.html">Parent Portal</a>
-      <a href="instructor-area.html">Instructor Area</a>
+      <a href="student-dashboard.html">My Learning</a>
+      <a href="online-lessons.html" class="active">Fun Lessons</a>
+      <a href="parent-portal.html">For Parents</a>
+      <a href="instructor-area.html">For Teachers</a>
+      <a href="kids-corner.html">Kids’ Corner</a>
+      <div class="language-toggle">
+        <select id="language" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="sw">Swahili</option>
+        </select>
+      </div>
       <div class="search-bar">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search courses..." aria-label="Search courses">
+        <input type="text" placeholder="Find fun courses..." aria-label="Search courses">
       </div>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Get started with TechieSprouts">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start learning with TechieSprouts">Start Now</a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Code at Your Own Pace! 🚀</h1>
-      <p class="hero-subtitle">Fun, interactive lessons to spark creativity and build tech skills in a safe environment!</p>
-      <a href="#courses" class="cta-button" aria-label="Explore tech courses">Explore Courses</a>
-      <!-- Updated Privacy Policy note -->
-      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act & COPPA-compliant</a></p>
+      <h1>Learn Tech the Fun Way! 🌟</h1>
+      <p class="hero-subtitle">Make games, websites, and robots with easy lessons!</p>
+      <a href="#courses" class="cta-button" aria-label="Explore fun courses">See Courses</a>
+      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
     </div>
   </section>
 
   <!-- Online Lessons Section -->
   <section class="content-section" id="courses">
-    <h2>Our Tech Courses</h2>
-    <!-- Updated intro with Privacy Policy link -->
-    <p class="section-intro">Choose a course to start coding, creating, and exploring! All lessons are kid-friendly and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">compliant with Kenya’s privacy laws</a>.</p>
-    
-    <!-- Scratch Coding -->
-    <div class="course-section" id="scratch">
-      <h3>Scratch Coding (Ages 6–8)</h3>
-      <p>Create games and animations with Scratch’s drag-and-drop tools. Perfect for beginners!</p>
-      <div class="card-grid">
-        <div class="card">
-          <img src="images/scratch.jpg" alt="Scratch Coding" class="card-image">
-          <h4>4-Week Course</h4>
-          <ul>
-            <li><strong>Week 1</strong>: Animate a character</li>
-            <li><strong>Week 2</strong>: Add sounds and interactions</li>
-            <li><strong>Week 3</strong>: Build a chase game</li>
-            <li><strong>Week 4</strong>: Share your final project</li>
-          </ul>
-          <a href="#scratch-week1" class="cta-button" aria-label="Try Scratch free lesson">Try Free Lesson</a>
-        </div>
-        <div class="card">
-          <iframe src="https://scratch.mit.edu/projects/123456/embed" width="100%" height="200" frameborder="0" allowfullscreen aria-label="Scratch demo"></iframe>
-          <h4>Try It Now!</h4>
-          <p>Code a fun animation in Scratch!</p>
-          <a href="https://scratch.mit.edu" target="_blank" class="cta-button" aria-label="Start coding in Scratch">Start Coding</a>
-        </div>
+    <h2>Jifunze Teknolojia! (Learn Tech!)</h2>
+    <p class="section-intro">Pick a fun course to make games, robots, or websites! No experience needed. 😊</p>
+    <div class="course-filters">
+      <button onclick="filterCourses('ages6-8')">Ages 6–8</button>
+      <button onclick="filterCourses('ages9-12')">Ages 9–12</button>
+      <button onclick="filterCourses('coding')">Coding</button>
+      <button onclick="filterCourses('robots')">Robots</button>
+    </div>
+    <div class="card-grid">
+      <!-- Scratch Coding -->
+      <div class="card" data-category="ages6-8 coding">
+        <img src="images/kenya-scratch.jpg" alt="Scratch game" class="card-image">
+        <h3>Make a Safari Game! 🦒</h3>
+        <p>Drag blocks to create a game with lions and zebras using Scratch. Super easy!</p>
+        <span class="difficulty">Super Easy 🌟</span>
+        <a href="#scratch-demo" class="cta-button" aria-label="Play Scratch demo">Play Demo</a>
+        <a href="#scratch-week1" class="cta-button" aria-label="Start Scratch free lesson">Start Free Lesson</a>
+        <a href="downloads/scratch-guide.pdf" class="offline-link" aria-label="Download Scratch guide">Download Guide</a>
       </div>
-      <div class="lesson-details" id="scratch-week1">
-        <h4>Week 1: Intro to Scratch</h4>
-        <p><strong>Objective</strong>: Learn Scratch’s interface and animate a character.</p>
-        <p><strong>Activities</strong>: Watch a 5-min video, code a moving sprite, complete a worksheet.</p>
-        <p><strong>Outcome</strong>: Create a talking, moving sprite.</p>
-        <a href="student-dashboard.html" class="cta-button" aria-label="Start Scratch Week 1">Start Lesson</a>
+      <!-- Python Basics -->
+      <div class="card" data-category="ages9-12 coding">
+        <img src="images/kenya-python.jpg" alt="Python game" class="card-image">
+        <h3>Code a Matatu Race Game! 🚐</h3>
+        <p>Learn Python to make a fun racing game. For ages 9–12.</p>
+        <span class="difficulty">Medium 🚀</span>
+        <a href="#python-demo" class="cta-button" aria-label="See Python demo">See Demo</a>
+        <a href="#python-week1" class="cta-button" aria-label="Start Python free lesson">Start Free Lesson</a>
+        <a href="downloads/python-guide.pdf" class="offline-link" aria-label="Download Python guide">Download Guide</a>
+      </div>
+      <!-- Web Development -->
+      <div class="card" data-category="ages13-16 web">
+        <img src="images/kenya-web.jpg" alt="Website design" class="card-image">
+        <h3>Build a Website About Kenya 🇰🇪</h3>
+        <p>Create a website about Kenyan heroes with HTML/CSS. For ages 13–16.</p>
+        <span class="difficulty">Challenge 💡</span>
+        <a href="#web-demo" class="cta-button" aria-label="See web demo">See Demo</a>
+        <a href="#web-week1" class="cta-button" aria-label="Start web free lesson">Start Free Lesson</a>
+        <a href="downloads/web-guide.pdf" class="offline-link" aria-label="Download web guide">Download Guide</a>
+      </div>
+      <!-- Robotics -->
+      <div class="card" data-category="ages9-12 robots">
+        <img src="images/kenya-robotics.jpg" alt="Robotics project" class="card-image">
+        <h3>Code a Farmer’s Robot! 🌾</h3>
+        <p>Use Micro:bit to make a robot for Kenyan farms. For ages 9–12.</p>
+        <span class="difficulty">Medium 🚀</span>
+        <a href="#robotics-demo" class="cta-button" aria-label="See robotics demo">See Demo</a>
+        <a href="#robotics-week1" class="cta-button" aria-label="Start robotics free lesson">Start Free Lesson</a>
+        <a href="downloads/robotics-guide.pdf" class="offline-link" aria-label="Download robotics guide">Download Guide</a>
       </div>
     </div>
-
-    <!-- Python Basics -->
-    <div class="course-section" id="python">
-      <h3>Python Basics (Ages 9–12)</h3>
-      <p>Learn to code with Python’s simple, powerful language. Build games and programs!</p>
-      <div class="card-grid">
-        <div class="card">
-          <img src="images/python.jpg" alt="Python Basics" class="card-image">
-          <h4>6-Week Course</h4>
-          <ul>
-            <li><strong>Week 1</strong>: Print text with Python</li>
-            <li><strong>Week 2</strong>: Variables and input</li>
-            <li><strong>Week 3</strong>: If/else statements</li>
-            <li><strong>Week 4</strong>: Loops and lists</li>
-            <li><strong>Week 5</strong>: Functions and games</li>
-            <li><strong>Week 6</strong>: Final quiz game</li>
-          </ul>
-          <a href="#python-week1" class="cta-button" aria-label="Try Python free lesson">Try Free Lesson</a>
-        </div>
-        <div class="card">
-          <iframe src="https://replit.com/@example/HelloWorld#main.py" width="100%" height="200" frameborder="0" allowfullscreen aria-label="Python demo"></iframe>
-          <h4>Try It Now!</h4>
-          <p>Write your first Python code!</p>
-          <a href="https://replit.com" target="_blank" class="cta-button" aria-label="Start coding in Python">Start Coding</a>
-        </div>
-      </div>
-      <div class="lesson-details" id="python-week1">
-        <h4>Week 1: Python Setup and Printing Text</h4>
-        <p><strong>Objective</strong>: Set up Python and write a “Hello, World!” program.</p>
-        <p><strong>Activities</strong>: Watch a 7-min video, code in Replit, complete a challenge.</p>
-        <p><strong>Outcome</strong>: Run a basic Python program.</p>
-        <a href="student-dashboard.html" class="cta-button" aria-label="Start Python Week 1">Start Lesson</a>
-      </div>
-    </div>
-
-    <!-- Web Development -->
-    <div class="course-section" id="web">
-      <h3>Web Development (Ages 13–16)</h3>
-      <p>Build cool websites with HTML, CSS, and JavaScript. Create your own portfolio!</p>
-      <div class="card-grid">
-        <div class="card">
-          <img src="images/webdev.jpg" alt="Web Development" class="card-image">
-          <h4>8-Week Course</h4>
-          <ul>
-            <li><strong>Week 1</strong>: HTML structure</li>
-            <li><strong>Week 2</strong>: CSS styling</li>
-            <li><strong>Week 3</strong>: Responsive design</li>
-            <li><strong>Week 4</strong>: JavaScript basics</li>
-            <li><strong>Week 5</strong>: DOM and events</li>
-            <li><strong>Week 6</strong>: Dynamic webpage</li>
-            <li><strong>Week 7</strong>: Forms and animations</li>
-            <li><strong>Week 8</strong>: Portfolio project</li>
-          </ul>
-          <a href="#web-week1" class="cta-button" aria-label="Try Web Development free lesson">Try Free Lesson</a>
-        </div>
-        <div class="card">
-          <iframe src="https://codepen.io/pen/embed/abc123" width="100%" height="200" frameborder="0" allowfullscreen aria-label="Web demo"></iframe>
-          <h4>Try It Now!</h4>
-          <p>Build a simple webpage!</p>
-          <a href="https://codepen.io" target="_blank" class="cta-button" aria-label="Start coding in CodePen">Start Coding</a>
-        </div>
-      </div>
-      <div class="lesson-details" id="web-week1">
-        <h4>Week 1: HTML Basics and Structure</h4>
-        <p><strong>Objective</strong>: Learn HTML tags and create a webpage.</p>
-        <p><strong>Activities</strong>: Watch a 10-min video, code in CodePen, use a cheatsheet.</p>
-        <p><strong>Outcome</strong>: Build a basic HTML webpage.</p>
-        <a href="student-dashboard.html" class="cta-button" aria-label="Start Web Development Week 1">Start Lesson</a>
-      </div>
-    </div>
-
-    <!-- Digital Citizenship -->
-    <div class="course-section" id="digital-citizenship">
-      <h3>Digital Citizenship (All Ages)</h3>
-      <p>Learn to stay safe and responsible online.</p>
-      <div class="card-grid">
-        <div class="card">
-          <img src="images/digital-citizenship.jpg" alt="Digital Citizenship" class="card-image">
-          <h4>1-Week Module</h4>
-          <ul>
-            <li>Online safety and privacy</li>
-            <li>Ethical tech use</li>
-            <li>Preventing cyberbullying</li>
-          </ul>
-          <a href="#citizenship-lesson" class="cta-button" aria-label="Try Digital Citizenship free lesson">Try Free Lesson</a>
-        </div>
-      </div>
-      <div class="lesson-details" id="citizenship-lesson">
-        <h4>Digital Citizenship Module</h4>
-        <p><strong>Objective</strong>: Understand safe and ethical online behavior.</p>
-        <p><strong>Activities</strong>: Watch a 5-min video, complete an interactive quiz.</p>
-        <p><strong>Outcome</strong>: Earn a Digital Defender badge.</p>
-        <a href="student-dashboard.html" class="cta-button" aria-label="Start Digital Citizenship">Start Lesson</a>
-      </div>
-    </div>
+    <p class="offline-note">No internet? Download our free guides to learn offline!</p>
   </section>
 
   <!-- Footer -->
@@ -182,7 +109,6 @@
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <!-- Updated Privacy Policy link -->
         <a href="privacy.html" aria-label="View our Privacy Policy">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
@@ -195,8 +121,7 @@
         <input type="email" name="email" placeholder="Join our newsletter" aria-label="Newsletter email" required>
         <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
-      <!-- Updated COPPA note -->
-      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act and COPPA">Kenya Data Protection Act & COPPA-Compliant</a></p>
+      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act">Kenya Data Protection Act Compliant</a></p>
     </div>
     <p>© 2025 TechieSprouts</p>
   </footer>
@@ -223,19 +148,38 @@
       }
     });
 
+    // Language Toggle (Placeholder)
+    const languageSelect = document.getElementById('language');
+    languageSelect.addEventListener('change', (e) => {
+      console.log('Language changed to:', e.target.value);
+      // TODO: Implement language switch logic
+    });
+
     // Search Functionality
     const searchInput = document.querySelector('.search-bar input');
     const courses = [
       { title: "Scratch Coding", url: "#scratch" },
       { title: "Python Basics", url: "#python" },
       { title: "Web Development", url: "#web" },
-      { title: "Digital Citizenship", url: "#digital-citizenship" }
+      { title: "Robotics", url: "#robotics" }
     ];
     searchInput.addEventListener('input', (e) => {
       const query = e.target.value.toLowerCase();
       const results = courses.filter(course => course.title.toLowerCase().includes(query));
       console.log(results); // TODO: Display results in a dropdown
     });
+
+    // Course Filter
+    function filterCourses(category) {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        if (card.dataset.category.includes(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 </html>
