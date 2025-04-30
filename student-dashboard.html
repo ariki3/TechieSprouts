@@ -3,63 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechieSprouts Student Dashboard: Track your coding progress and access fun tech lessons.">
-  <meta name="keywords" content="kids coding, student dashboard, TechieSprouts, Scratch, Python">
-  <meta property="og:title" content="TechieSprouts - Student Dashboard">
-  <meta property="og:description" content="Explore your coding adventure with TechieSprouts’ Student Dashboard!">
+  <meta name="description" content="TechieSprouts: Track your fun tech journey with coding, robotics, and more!">
+  <meta name="keywords" content="kids coding, student dashboard, TechieSprouts, Scratch, Python, Kenya">
+  <meta property="og:title" content="TechieSprouts - My Learning">
+  <meta property="og:description" content="Track your tech adventure with TechieSprouts in Kenya!">
   <meta property="og:image" content="images/hero-bg.jpg">
-  <title>TechieSprouts - Student Dashboard</title>
+  <title>TechieSprouts - My Learning</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <!-- Header with Logo, Navigation, and CTA -->
+  <!-- Header -->
   <header class="site-header" aria-label="Main navigation">
     <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="student-dashboard.html" class="active">Student Dashboard</a>
-      <a href="online-lessons.html">Online Lessons</a>
-      <a href="parent-portal.html">Parent Portal</a>
-      <a href="instructor-area.html">Instructor Area</a>
+      <a href="student-dashboard.html" class="active">My Learning</a>
+      <a href="online-lessons.html">Fun Lessons</a>
+      <a href="parent-portal.html">For Parents</a>
+      <a href="instructor-area.html">For Teachers</a>
+      <a href="kids-corner.html">Kids’ Corner</a>
+      <div class="language-toggle">
+        <select id="language" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="sw">Swahili</option>
+        </select>
+      </div>
       <div class="search-bar">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search courses..." aria-label="Search courses">
+        <input type="text" placeholder="Find fun courses..." aria-label="Search courses">
       </div>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Get started with TechieSprouts">Get Started</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start learning with TechieSprouts">Start Now</a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Your Coding Adventure Starts Here!</h1>
-      <p class="hero-subtitle">Track your progress and dive into fun lessons!</p>
-      <!-- Added Privacy Policy note -->
-      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act & COPPA-compliant</a></p>
+      <h1>Your Fun Tech Journey! 🚀</h1>
+      <p class="hero-subtitle">See your progress and try new challenges!</p>
+      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
     </div>
   </section>
 
   <!-- Student Dashboard Section -->
   <section class="content-section">
-    <h2>Student Dashboard (Coming Soon)</h2>
+    <h2>My Learning Path</h2>
+    <p class="section-intro">Jifunze na Ufurahie! (Learn and Have Fun!)</p>
     <div class="card-grid">
       <div class="card">
         <i class="fas fa-chart-line card-icon"></i>
-        <h3>Track Progress</h3>
-        <p>See your coding skills grow with every project!</p>
+        <h3>My Progress</h3>
+        <p>Check how many games and projects you’ve made!</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 50%;"></div>
+        </div>
       </div>
       <div class="card">
         <i class="fas fa-book card-icon"></i>
-        <h3>Access Lessons</h3>
-        <p>Explore interactive tutorials and challenges.</p>
+        <h3>My Lessons</h3>
+        <p>Jump into fun coding and robotics lessons.</p>
+        <a href="online-lessons.html" class="cta-button" aria-label="See lessons">See Lessons</a>
       </div>
       <div class="card">
         <i class="fas fa-trophy card-icon"></i>
-        <h3>Earn Badges</h3>
-        <p>Unlock cool rewards for your tech achievements.</p>
+        <h3>My Badges</h3>
+        <p>Earn stars like “Safari Coder” or “Robot Hero”!</p>
+        <div class="badges">
+          <img src="images/badge-safari.png" alt="Safari Coder Badge" class="badge">
+          <img src="images/badge-robot.png" alt="Robot Hero Badge" class="badge">
+        </div>
       </div>
+    </div>
+    <!-- Weekly Challenge -->
+    <div class="course-section">
+      <h3>Weekly Challenge: Code a Matatu Game! 🚐</h3>
+      <p>Make a game about matatus racing in Nairobi. Win a “Nairobi Coder” badge!</p>
+      <a href="online-lessons.html#challenge" class="cta-button" aria-label="Start weekly challenge">Start Challenge</a>
     </div>
   </section>
 
@@ -81,17 +102,16 @@
         <input type="email" name="email" placeholder="Join our newsletter" aria-label="Newsletter email" required>
         <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
-      <!-- Added COPPA note -->
-      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act and COPPA">Kenya Data Protection Act & COPPA-Compliant</a></p>
+      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act">Kenya Data Protection Act Compliant</a></p>
     </div>
     <p>© 2025 TechieSprouts</p>
   </footer>
 
-  <!-- JavaScript for Retracting Navigation -->
+  <!-- JavaScript -->
   <script>
+    // Retracting Navigation
     let lastScrollTop = 0;
     const header = document.querySelector('.site-header');
-
     window.addEventListener('scroll', () => {
       if (window.innerWidth <= 768) {
         let currentScrollTop = window.scrollY;
@@ -103,11 +123,17 @@
         lastScrollTop = currentScrollTop;
       }
     });
-
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         header.classList.remove('header-hidden');
       }
+    });
+
+    // Language Toggle (Placeholder)
+    const languageSelect = document.getElementById('language');
+    languageSelect.addEventListener('change', (e) => {
+      console.log('Language changed to:', e.target.value);
+      // TODO: Implement language switch logic
     });
   </script>
 </body>
