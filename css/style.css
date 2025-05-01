@@ -1,7 +1,7 @@
 /*
  * TechieSprouts CSS Styles
  * Applies to HTML files: index.html, My-Learning.html, Fun-Lessons.html, For-Parents.html, For-Teachers.html, kids-corner.html, about.html, contact.html, privacy.html, terms.html
- * Last updated: April 30, 2025
+ * Last updated: May 1, 2025
  */
 
 /* General Styling */
@@ -29,6 +29,7 @@ h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: var(--primary-blue);
+  text-align: center; /* Ensure headings are centered */
 }
 
 h1 { font-size: 40px; }
@@ -163,6 +164,27 @@ p {
   background-color: #008BB8;
 }
 
+/* Kid Button (for kids-corner.html) */
+.kid-button {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+  margin: 16px auto;
+  text-decoration: none;
+  text-align: center;
+}
+
+.kid-button:hover {
+  background-color: #E5941F;
+  transform: scale(1.1);
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 161, 214, 0.3), rgba(0, 161, 214, 0.3)), url('../images/hero-bg.jpg') center/cover no-repeat;
@@ -187,20 +209,22 @@ p {
   color: #FFFFFF;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   margin: 10px 0;
-}
-
-.hero-ctas {
-  display: flex;
-  gap: 10px; /* Reduced gap between CTA buttons */
-  justify-content: center;
-  margin: 20px 0;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  text-align: center;
 }
 
 .safety-note {
   font-size: 14px;
   color: #FFFFFF;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.privacy-link {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.privacy-link:hover {
+  color: var(--accent-orange);
 }
 
 /* Content Sections */
@@ -216,9 +240,9 @@ p {
 .section-intro {
   font-size: 18px;
   color: var(--text-dark);
-  text-align: center; /* Explicitly center section intro text */
+  text-align: center;
   margin: 0 auto 24px;
-  max-width: 800px; /* Constrain width for readability */
+  max-width: 800px;
 }
 
 /* Course Filters */
@@ -288,6 +312,11 @@ p {
   border-color: var(--accent-orange);
 }
 
+.kid-card {
+  /* Specific styling for kids-corner.html cards */
+  padding: 16px;
+}
+
 .card-icon {
   font-size: 48px;
   color: var(--primary-blue);
@@ -300,6 +329,36 @@ p {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
+}
+
+/* Progress Bar (for My-Learning.html) */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--neutral-gray);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--primary-green);
+  transition: width 0.3s ease;
+}
+
+/* Badges (for My-Learning.html) */
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.badge {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 /* Challenge Text */
@@ -404,21 +463,27 @@ p {
   max-width: 200px;
 }
 
+.coppa-note {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin: 16px 0;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 12px 20px; /* Reduced padding for compact mobile header */
+    padding: 12px 20px;
   }
   .site-logo {
-    width: 100px; /* Smaller logo for mobile */
+    width: 100px;
     margin: 0 auto 6px;
   }
   .site-nav {
     flex-direction: column;
-    gap: 6px; /* Reduced gap for compact navigation */
+    gap: 6px;
     margin: 6px 0;
     width: 100%;
     align-items: center;
@@ -426,25 +491,25 @@ p {
   }
   .site-nav a {
     width: 100%;
-    max-width: 200px; /* Reduced max-width for smaller nav links */
+    max-width: 200px;
     text-align: center;
-    font-size: 12px; /* Smaller font size for mobile */
-    padding: 5px 8px; /* Reduced padding for compact links */
+    font-size: 12px;
+    padding: 5px 8px;
   }
   .language-toggle {
     margin: 0;
     width: 100%;
-    max-width: 120px; /* Slightly smaller language toggle */
+    max-width: 120px;
     display: flex;
     justify-content: center;
   }
   .language-toggle select {
-    font-size: 12px; /* Smaller font size for mobile */
-    padding: 4px; /* Reduced padding */
+    font-size: 12px;
+    padding: 4px;
   }
   .search-bar {
     width: 100%;
-    max-width: 200px; /* Smaller search bar */
+    max-width: 200px;
     padding: 4px 8px;
     margin: 6px auto;
   }
@@ -456,31 +521,31 @@ p {
   .site-header .cta-button {
     margin: 6px auto;
     width: 100%;
-    max-width: 200px; /* Smaller CTA button */
-    font-size: 14px; /* Smaller font size */
-    padding: 8px 16px; /* Reduced padding */
+    max-width: 200px;
+    font-size: 14px;
+    padding: 8px 16px;
   }
   .hero {
-    padding: 60px 20px; /* Reduced padding for mobile */
+    padding: 60px 20px;
   }
   .hero h1 {
-    font-size: 32px; /* Smaller heading for mobile */
+    font-size: 32px;
   }
   .hero-subtitle {
-    font-size: 16px; /* Smaller subtitle for mobile */
+    font-size: 16px;
   }
   .content-section {
-    padding: 40px 20px; /* Reduced padding for mobile */
+    padding: 40px 20px;
   }
   .section-intro {
-    font-size: 16px; /* Slightly smaller for mobile */
+    font-size: 16px;
   }
   .course-filters {
-    gap: 8px; /* Reduced gap for mobile */
+    gap: 8px;
   }
   .course-filters button {
-    font-size: 12px; /* Smaller font size for mobile */
-    padding: 6px 12px; /* Reduced padding */
+    font-size: 12px;
+    padding: 6px 12px;
   }
   .footer-content {
     flex-direction: column;
@@ -518,5 +583,12 @@ p {
     font-size: 16px;
     margin: 16px auto;
     padding: 0 20px;
+  }
+  .card-image {
+    height: 120px; /* Smaller images on mobile */
+  }
+  .badge {
+    width: 40px;
+    height: 40px;
   }
 }
