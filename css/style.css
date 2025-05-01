@@ -29,7 +29,7 @@ h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: var(--primary-blue);
-  text-align: center;
+  text-align: center; /* Ensure headings are centered */
 }
 
 h1 { font-size: 40px; }
@@ -39,7 +39,7 @@ h3 { font-size: 22px; }
 p {
   font-size: 18px;
   color: var(--text-dark);
-  text-align: center;
+  text-align: center; /* Ensure all paragraphs are centered by default */
 }
 
 /* Site Header */
@@ -57,7 +57,7 @@ p {
 }
 
 .site-header.header-hidden {
-  transform: translateY(-100%);
+  transform: translateY(-100%); /* Hide header on scroll in mobile view */
 }
 
 .site-logo {
@@ -156,10 +156,6 @@ p {
   transform: scale(1.1);
 }
 
-.cta-button:focus {
-  outline: 2px solid var(--primary-blue);
-}
-
 .parent-cta {
   background-color: var(--primary-blue);
 }
@@ -189,10 +185,6 @@ p {
   transform: scale(1.1);
 }
 
-.kid-button:focus {
-  outline: 2px solid var(--primary-blue);
-}
-
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 161, 214, 0.3), rgba(0, 161, 214, 0.3)), url('../images/hero-bg.jpg') center/cover no-repeat;
@@ -218,14 +210,6 @@ p {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   margin: 10px 0;
   text-align: center;
-}
-
-.hero-ctas {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin: 20px 0;
-  flex-wrap: wrap;
 }
 
 .safety-note {
@@ -329,6 +313,7 @@ p {
 }
 
 .kid-card {
+  /* Specific styling for kids-corner.html cards */
   padding: 16px;
 }
 
@@ -344,15 +329,6 @@ p {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
-}
-
-/* Difficulty Indicator (for index.html) */
-.difficulty {
-  font-size: 14px;
-  color: var(--primary-green);
-  font-weight: 600;
-  margin: 8px 0;
-  display: block;
 }
 
 /* Progress Bar (for My-Learning.html) */
@@ -558,10 +534,6 @@ p {
   .hero-subtitle {
     font-size: 16px;
   }
-  .hero-ctas {
-    flex-direction: column;
-    gap: 8px;
-  }
   .content-section {
     padding: 40px 20px;
   }
@@ -613,13 +585,10 @@ p {
     padding: 0 20px;
   }
   .card-image {
-    height: 120px;
+    height: 120px; /* Smaller images on mobile */
   }
   .badge {
     width: 40px;
     height: 40px;
-  }
-  .difficulty {
-    font-size: 12px;
   }
 }
