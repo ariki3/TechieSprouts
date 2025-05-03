@@ -613,3 +613,114 @@ p {
     width: 100%; /* Ensures the button remains responsive within max-width */
   }
 }
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1100;
+}
+
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+  width: 24px;
+  height: 3px;
+  background-color: var(--primary-blue);
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon {
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  top: 8px;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-icon {
+  background: transparent;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Search Results Dropdown */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border: 1px solid var(--primary-blue);
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-results a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 14px;
+  text-align: left;
+}
+
+.search-results a:hover {
+  background-color: var(--neutral-gray);
+}
+
+/* Mobile Nav Toggle */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .site-nav.active {
+    display: flex;
+  }
+  .site-nav a, .site-nav .language-toggle, .site-nav .search-bar {
+    width: 100%;
+    max-width: none;
+    margin: 8px 0;
+  }
+}
