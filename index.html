@@ -8,7 +8,7 @@
   <meta property="og:title" content="TechieSprouts - Fun Tech for Kids">
   <meta property="og:description" content="Join TechieSprouts for fun tech lessons for kids aged 6–16 in Kenya!">
   <meta property="og:image" content="images/hero-bg.jpg">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com https://*.google.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com https://*.google.com;">
   <title>TechieSprouts - Fun Tech for Kids</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -20,10 +20,12 @@
 <body>
   <!-- Header -->
   <header class="site-header" aria-label="Main navigation">
-    <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
-    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
-      <span class="hamburger-icon"></span>
-    </button>
+    <div class="header-logo">
+      <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="hamburger-icon"></span>
+      </button>
+    </div>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation" role="navigation">
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="Fun-Lessons.html">Fun Lessons</a>
@@ -146,81 +148,6 @@
   </footer>
 
   <!-- JavaScript -->
-  <script defer>
-    // Retracting Navigation
-    let lastScrollTop = 0;
-    const header = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-      if (window.innerWidth <= 768) {
-        let currentScrollTop = window.scrollY;
-        if (currentScrollTop > lastScrollTop) {
-          header.classList.add('header-hidden');
-        } else {
-          header.classList.remove('header-hidden');
-        }
-        lastScrollTop = currentScrollTop;
-      }
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        header.classList.remove('header-hidden');
-      }
-    });
-
-    // Hamburger Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.site-nav');
-    hamburger.addEventListener('click', () => {
-      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', !isExpanded);
-      nav.classList.toggle('active');
-    });
-
-    // Language Toggle
-    const languageSelect = document.getElementById('language');
-    languageSelect.addEventListener('change', (e) => {
-      const lang = e.target.value;
-      if (lang === 'sw') {
-        window.location.href = 'index-sw.html';
-      } else {
-        window.location.href = 'index.html';
-      }
-    });
-
-    // Search Functionality
-    const searchInput = document.querySelector('.search-bar input');
-    const searchResults = document.querySelector('.search-results');
-    const courses = [
-      { title: "Scratch Coding", url: "Fun-Lessons.html#scratch" },
-      { title: "Python Basics", url: "Fun-Lessons.html#python" },
-      { title: "Web Development", url: "Fun-Lessons.html#web" },
-      { title: "Digital Citizenship", url: "Fun-Lessons.html#digital-citizenship" }
-    ];
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      searchResults.innerHTML = '';
-      if (query.length > 0) {
-        const results = courses.filter(course => course.title.toLowerCase().includes(query));
-        if (results.length > 0) {
-          results.forEach(result => {
-            const link = document.createElement('a');
-            link.href = result.url;
-            link.textContent = result.title;
-            searchResults.appendChild(link);
-          });
-          searchResults.classList.add('active');
-        } else {
-          searchResults.classList.remove('active');
-        }
-      } else {
-        searchResults.classList.remove('active');
-      }
-    });
-    document.addEventListener('click', (e) => {
-      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-        searchResults.classList.remove('active');
-      }
-    });
-  </script>
+  <script defer src="js/scripts.js"></script>
 </body>
 </html>
