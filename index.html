@@ -8,12 +8,12 @@
   <meta property="og:title" content="TechieSprouts - Fun Tech for Kids">
   <meta property="og:description" content="Join TechieSprouts for fun tech lessons for kids aged 6–16 in Kenya!">
   <meta property="og:image" content="images/hero-bg.jpg">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com https://*.google.com;">
   <title>TechieSprouts - Fun Tech for Kids</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20250503">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -21,10 +21,10 @@
   <!-- Header -->
   <header class="site-header" aria-label="Main navigation">
     <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
-    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
       <span class="hamburger-icon"></span>
     </button>
-    <nav class="site-nav" aria-label="Primary navigation" role="navigation">
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" role="navigation">
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="Fun-Lessons.html">Fun Lessons</a>
       <a href="For-Parents.html">For Parents</a>
@@ -96,7 +96,7 @@
 
   <!-- Programs by Age -->
   <section class="content-section">
-    <h platform="x86_64"2>Lessons for Your Age</h2>
+    <h2>Lessons for Your Age</h2>
     <div class="card-grid">
       <div class="card">
         <img src="images/kenya-kids6-8.webp" alt="Ages 6-8 course" class="card-image" loading="lazy">
@@ -146,7 +146,7 @@
   </footer>
 
   <!-- JavaScript -->
-  <script>
+  <script defer>
     // Retracting Navigation
     let lastScrollTop = 0;
     const header = document.querySelector('.site-header');
@@ -194,7 +194,7 @@
       { title: "Scratch Coding", url: "Fun-Lessons.html#scratch" },
       { title: "Python Basics", url: "Fun-Lessons.html#python" },
       { title: "Web Development", url: "Fun-Lessons.html#web" },
-      { title: "Digital Citizenship", url/gui="Fun-Lessons.html#digital-citizenship" }
+      { title: "Digital Citizenship", url: "Fun-Lessons.html#digital-citizenship" }
     ];
     searchInput.addEventListener('input', (e) => {
       const query = e.target.value.toLowerCase().trim();
