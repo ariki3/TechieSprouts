@@ -45,7 +45,7 @@ p {
 /* Site Header */
 .site-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Spread logo and nav apart */
   align-items: center;
   padding: 16px 40px;
   background-color: #FFFFFF;
@@ -65,7 +65,7 @@ p {
   height: auto;
   max-width: 100%;
   object-fit: contain;
-  margin: 0 auto;
+  margin: 0; /* Remove centering for left alignment */
 }
 
 /* Language Toggle */
@@ -89,9 +89,11 @@ p {
 .site-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center nav items within nav */
   gap: 24px;
   flex-wrap: wrap;
+  margin: 0 auto; /* Center nav block in remaining space */
+  max-width: 600px; /* Limit nav width for balance */
 }
 
 .site-nav a {
@@ -488,6 +490,7 @@ p {
     width: 100%;
     align-items: center;
     justify-content: center;
+    max-width: none; /* Ensure full width on mobile */
   }
   .site-nav a {
     width: 100%;
@@ -592,6 +595,7 @@ p {
     height: 40px;
   }
 }
+
 @media (min-width: 769px) {
   .cta-button, .parent-cta {
     max-width: 200px; /* Adjust this value to match the desired width */
