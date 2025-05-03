@@ -1,7 +1,7 @@
 /*
  * TechieSprouts CSS Styles
  * Applies to HTML files: index.html, My-Learning.html, Fun-Lessons.html, For-Parents.html, For-Teachers.html, kids-corner.html, about.html, contact.html, privacy.html, terms.html
- * Last updated: May 1, 2025
+ * Last updated: May 3, 2025
  */
 
 /* General Styling */
@@ -29,7 +29,7 @@ h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: var(--primary-blue);
-  text-align: center; /* Ensure headings are centered */
+  text-align: center;
 }
 
 h1 { font-size: 40px; }
@@ -39,13 +39,13 @@ h3 { font-size: 22px; }
 p {
   font-size: 18px;
   color: var(--text-dark);
-  text-align: center; /* Ensure all paragraphs are centered by default */
+  text-align: center;
 }
 
 /* Site Header */
 .site-header {
   display: flex;
-  justify-content: space-between; /* Spread logo and nav apart */
+  justify-content: space-between;
   align-items: center;
   padding: 16px 40px;
   background-color: #FFFFFF;
@@ -57,7 +57,7 @@ p {
 }
 
 .site-header.header-hidden {
-  transform: translateY(-100%); /* Hide header on scroll in mobile view */
+  transform: translateY(-100%);
 }
 
 .site-logo {
@@ -65,7 +65,7 @@ p {
   height: auto;
   max-width: 100%;
   object-fit: contain;
-  margin: 0; /* Remove centering for left alignment */
+  margin: 0;
 }
 
 /* Language Toggle */
@@ -73,7 +73,7 @@ p {
   margin: 0;
   display: flex;
   justify-content: center;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 }
 
 .language-toggle select {
@@ -90,11 +90,11 @@ p {
 .site-nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center nav items within nav */
-  gap: 16px; /* Reduced from 24px to save space */
+  justify-content: center;
+  gap: 16px;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 800px; /* Increased from 600px to fit all items */
+  max-width: 800px;
 }
 
 .site-nav a {
@@ -105,7 +105,7 @@ p {
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
   text-align: center;
-  flex-shrink: 0; /* Prevent nav links from shrinking */
+  flex-shrink: 0;
 }
 
 .site-nav a:hover, .site-nav a.active {
@@ -122,8 +122,8 @@ p {
   border-radius: 20px;
   padding: 6px 12px;
   max-width: 200px;
-  margin: 0; /* Remove margin to fit inline */
-  flex-shrink: 0; /* Prevent shrinking */
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .search-bar i {
@@ -177,20 +177,20 @@ p {
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: 600; /* Bolder font for emphasis */
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
   display: block;
   margin: 16px auto;
   text-decoration: none;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .kid-button:hover {
   background-color: #E5941F;
   transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Hero Section */
@@ -321,7 +321,6 @@ p {
 }
 
 .kid-card {
-  /* Specific styling for kids-corner.html cards */
   padding: 16px;
 }
 
@@ -477,142 +476,6 @@ p {
   margin: 16px 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-  }
-  .site-logo {
-    width: 100px;
-    margin: 0 auto 6px;
-  }
-  .site-nav {
-    flex-direction: column;
-    gap: 6px;
-    margin: 6px 0;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    max-width: none; /* Ensure full width on mobile */
-  }
-  .site-nav a {
-    width: 100%;
-    max-width: 200px;
-    text-align: center;
-    font-size: 12px;
-    padding: 5px 8px;
-  }
-  .language-toggle {
-    margin: 0;
-    width: 100%;
-    max-width: 120px;
-    display: flex;
-    justify-content: center;
-  }
-  .language-toggle select {
-    font-size: 12px;
-    padding: 4px;
-  }
-  .search-bar {
-    width: 100%;
-    max-width: 200px;
-    padding: 4px 8px;
-    margin: 6px auto;
-  }
-  .search-bar input {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-  }
-  .site-header .cta-button {
-    margin: 6px auto;
-    width: 100%;
-    max-width: 200px;
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-  .hero {
-    padding: 60px 20px;
-  }
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero-subtitle {
-    font-size: 16px;
-  }
-  .content-section {
-    padding: 40px 20px;
-  }
-  .section-intro {
-    font-size: 16px;
-  }
-  .course-filters {
-    gap: 8px;
-  }
-  .course-filters button {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-  .newsletter-form {
-    flex-direction: column;
-    width: 100%;
-    max-width: 230px;
-    align-items: center;
-  }
-  .newsletter-form input {
-    width: 100%;
-    max-width: 210px;
-  }
-  .newsletter-form button {
-    width: 100%;
-    max-width: 210px;
-  }
-  .course-section {
-    margin: 16px auto;
-    padding: 0 20px;
-  }
-  .course-section p {
-    font-size: 16px;
-    margin: 12px auto;
-  }
-  .offline-note {
-    font-size: 16px;
-    margin: 16px auto;
-    padding: 0 20px;
-  }
-  .card-image {
-    height: 120px; /* Smaller images on mobile */
-  }
-  .badge {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (min-width: 769px) {
-  .site-nav {
-    flex-wrap: nowrap; /* Keep all items on one line */
-    gap: 16px;
-    max-width: 900px; /* Allow more space for all items */
-  }
-  .cta-button, .parent-cta {
-    max-width: 200px; /* Adjust this value to match the desired width */
-    width: 100%; /* Ensures the button remains responsive within max-width */
-  }
-}
 /* Hamburger Menu */
 .hamburger {
   display: none;
@@ -699,117 +562,191 @@ p {
   background-color: var(--neutral-gray);
 }
 
-/* Mobile Nav Toggle */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  .site-logo {
+    width: 100px;
+    margin: 0 auto 6px;
+  }
+
   .hamburger {
     display: block;
   }
+
   .site-nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     background-color: #FFFFFF;
     padding: 20px;
-    position: absolute;
-    top: 100%;
-    left: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
   .site-nav.active {
+    display: block;
+  }
+
+  .site-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 12px;
+    margin: 8px auto;
+  }
+
+  .site-nav .language-toggle,
+  .site-nav .search-bar {
+    width: 100%;
+    max-width: 200px;
+    margin: 8px auto;
+  }
+
+  .language-toggle {
+    margin: 0;
+    width: 100%;
+    max-width: 120px;
     display: flex;
+    justify-content: center;
   }
-  .site-nav a, .site-nav .language-toggle, .site-nav .search-bar {
-    width: 100%;
-    max-width: none;
-    margin: 8px 0;
+
+  .language-toggle select {
+    font-size: 12px;
+    padding: 4px;
   }
-}
-/* Logo */
-.site-logo {
-    display: block;
-    width: 150px;
-    height: auto;
-    margin: 0 auto; /* Adjust as needed */
-}
 
-/* Mobile Menu */
-.site-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .search-bar {
     width: 100%;
-    background: #fff; /* Adjust color */
-    padding: 1rem;
-}
+    max-width: 200px;
+    padding: 4px 8px;
+    margin: 6px auto;
+  }
 
-.site-nav.active {
-    display: block;
-}
+  .search-bar input {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+  }
 
-.site-nav a {
-    display: block;
-    padding: 0.5rem;
-}
+  .site-header .cta-button {
+    margin: 6px auto;
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
+  .hero {
+    padding: 60px 20px;
+  }
 
-.hamburger-icon,
-.hamburger-icon::before,
-.hamburger-icon::after {
-    content: '';
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #333;
-    margin: 5px 0;
-    transition: transform 0.3s;
-}
+  .hero h1 {
+    font-size: 32px;
+  }
 
-.hamburger-icon::before {
-    transform: translateY(-8px);
-}
+  .hero-subtitle {
+    font-size: 16px;
+  }
 
-.hamburger-icon::after {
-    transform: translateY(5px);
-}
+  .content-section {
+    padding: 40px 20px;
+  }
 
-.hamburger[aria-expanded="true"] .hamburger-icon {
-    background: transparent;
-}
+  .section-intro {
+    font-size: 16px;
+  }
 
-.hamburger[aria-expanded="true"] .hamburger-icon::before {
-    transform: rotate(45deg);
-}
+  .course-filters {
+    gap: 8px;
+  }
 
-.hamburger[aria-expanded="true"] .hamburger-icon::after {
-    transform: rotate(-45deg) translateY(-5px) translateX(5px);
-}
+  .course-filters button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    .site-nav {
-        display: none;
-    }
-    .site-nav.active {
-        display: block;
-    }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    max-width: 230px;
+    align-items: center;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    max-width: 210px;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    max-width: 210px;
+  }
+
+  .course-section {
+    margin: 16px auto;
+    padding: 0 20px;
+  }
+
+  .course-section p {
+    font-size: 16px;
+    margin: 12px auto;
+  }
+
+  .offline-note {
+    font-size: 16px;
+    margin: 16px auto;
+    padding: 0 20px;
+  }
+
+  .card-image {
+    height: 120px;
+  }
+
+  .badge {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (min-width: 769px) {
-    .site-nav {
-        display: flex;
-        position: static;
-        background: none;
-    }
-    .hamburger {
-        display: none;
-    }
+  .site-nav {
+    display: flex;
+    position: static;
+    background: none;
+    flex-wrap: nowrap;
+    gap: 16px;
+    max-width: 900px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .cta-button, .parent-cta {
+    max-width: 200px;
+    width: 100%;
+  }
 }
