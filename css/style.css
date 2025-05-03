@@ -592,3 +592,9 @@ p {
     height: 40px;
   }
 }
+@media (min-width: 769px) {
+  .cta-button, .parent-cta {
+    max-width: 200px; /* Adjust this value to match the desired width */
+    width: 100%; /* Ensures the button remains responsive within max-width */
+  }
+}
