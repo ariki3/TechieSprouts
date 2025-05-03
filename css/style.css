@@ -73,6 +73,7 @@ p {
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .language-toggle select {
@@ -90,10 +91,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: center; /* Center nav items within nav */
-  gap: 24px;
+  gap: 16px; /* Reduced from 24px to save space */
   flex-wrap: wrap;
-  margin: 0 auto; /* Center nav block in remaining space */
-  max-width: 600px; /* Limit nav width for balance */
+  margin: 0 auto;
+  max-width: 800px; /* Increased from 600px to fit all items */
 }
 
 .site-nav a {
@@ -104,6 +105,7 @@ p {
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
   text-align: center;
+  flex-shrink: 0; /* Prevent nav links from shrinking */
 }
 
 .site-nav a:hover, .site-nav a.active {
@@ -120,7 +122,8 @@ p {
   border-radius: 20px;
   padding: 6px 12px;
   max-width: 200px;
-  margin: 0 auto;
+  margin: 0; /* Remove margin to fit inline */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .search-bar i {
@@ -174,17 +177,20 @@ p {
   border: none;
   border-radius: 8px;
   font-size: 16px;
+  font-weight: 600; /* Bolder font for emphasis */
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
   display: block;
   margin: 16px auto;
   text-decoration: none;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
 .kid-button:hover {
   background-color: #E5941F;
   transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 /* Hero Section */
@@ -597,6 +603,11 @@ p {
 }
 
 @media (min-width: 769px) {
+  .site-nav {
+    flex-wrap: nowrap; /* Keep all items on one line */
+    gap: 16px;
+    max-width: 900px; /* Allow more space for all items */
+  }
   .cta-button, .parent-cta {
     max-width: 200px; /* Adjust this value to match the desired width */
     width: 100%; /* Ensures the button remains responsive within max-width */
