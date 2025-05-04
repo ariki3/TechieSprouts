@@ -37,7 +37,7 @@ h2 { font-size: 28px; }
 h3 { font-size: 22px; }
 
 h1 span {
-  vertical-align: middle; /* Align emoji with text */
+  vertical-align: middle;
 }
 
 p {
@@ -77,11 +77,44 @@ p {
   margin: 0;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: var(--text-dark);
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: var(--text-dark);
+  left: 0;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  top: 8px;
+}
+
 /* Language Toggle */
 .language-toggle {
   margin: 0;
-  display: flex;
-  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -90,7 +123,7 @@ p {
   border: 1px solid var(--primary-blue);
   border-radius: 4px;
   font-size: 14px;
-  max-width: 100px; /* Adjusted for better fit */
+  max-width: 100px;
   text-align: center;
 }
 
@@ -98,7 +131,6 @@ p {
 .site-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
 }
@@ -131,7 +163,7 @@ p {
 }
 
 .cta-button:hover {
-  background-color: #0088B3; /* Darker shade of primary-blue */
+  background-color: #0088B3;
 }
 
 /* Search Bar */
@@ -161,14 +193,189 @@ p {
   text-align: center;
 }
 
+/* Hero Section */
+.hero {
+  background-color: #FFFFFF;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--text-dark);
+  margin: 16px 0;
+}
+
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.safety-note {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.safety-note a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.safety-note a:hover {
+  text-decoration: underline;
+}
+
+/* Content Section */
+.content-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-icon {
+  font-size: 32px;
+  color: var(--primary-blue);
+  margin-bottom: 16px;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-gray);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--primary-blue);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: var(--text-dark);
+  font-size: 20px;
+}
+
+.footer-social a:hover {
+  color: var(--primary-blue);
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form input {
+  padding: 8px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.coppa-note {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.coppa-note a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.coppa-note a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   .site-nav {
-    gap: 8px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+  }
+
+  .site-nav.active {
+    display: flex;
+  }
+
+  .language-toggle,
+  .cta-button {
+    display: none;
   }
 
   .site-nav a {
     font-size: 14px;
     padding: 6px 8px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
   }
 }
