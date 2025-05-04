@@ -1,7 +1,7 @@
 /*
  * TechieSprouts CSS Styles
  * Applies to HTML files: index.html, My-Learning.html, Fun-Lessons.html, For-Parents.html, For-Teachers.html, kids-corner.html, about.html, contact.html, privacy.html, terms.html
- * Last updated: May 4, 2025
+ * Last updated: May 3, 2025
  */
 
 /* General Styling */
@@ -75,10 +75,75 @@ p {
   margin: 0;
 }
 
+/* Language Toggle */
+.language-toggle {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.language-toggle select {
+  padding: 6px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 120px;
+  text-align: center;
+}
+
 /* Navigation */
 .site-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Increased gap for better spacing */
-  flex
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.site-nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.site-nav a:hover, .site-nav a.active {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid var(--primary-blue);
+  border-radius: 20px;
+  padding: 6px 12px;
+  max-width: 200px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.search-bar i {
+  color: var(--primary-blue);
+  margin-right: 8px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+/* CTA
