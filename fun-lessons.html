@@ -5,22 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TechieSprouts: Fun, safe tech courses for kids to learn coding, robotics, and more!">
   <meta name="keywords" content="kids coding, tech education, Scratch, Python, robotics, Kenya">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com;">
-  <title>TechieSprouts - [Fun Lessons]</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://*.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://*.netlify.com https://*.google.com;">
+  <title>TechieSprouts - Fun Lessons</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20250503">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header" aria-label="Main navigation">
-    <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo">
-    <nav class="site-nav">
+    <div class="header-logo">
+      <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="hamburger-icon"></span>
+      </button>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" role="navigation">
       <a href="index.html">Home</a>
-      <a href="Fun-Lessons.html" class="active">Fun Lessons</a>
+      <a href="Fun-Lessons.html" class="active" aria-current="page">Fun Lessons</a>
       <a href="For-Parents.html">For Parents</a>
       <a href="For-Teachers.html">For Teachers</a>
       <a href="kids-corner.html">Kids’ Corner</a>
@@ -33,9 +38,10 @@
       <div class="search-bar">
         <i class="fas fa-search"></i>
         <input type="text" placeholder="Find fun courses..." aria-label="Search courses">
+        <div class="search-results" aria-live="polite"></div>
       </div>
     </nav>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start learning with TechieSprouts">Start Now</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start learning with TechieSprouts" rel="noopener noreferrer">Start Now</a>
   </header>
 
   <!-- Hero Section -->
@@ -61,7 +67,7 @@
     <div class="card-grid">
       <!-- Scratch Coding -->
       <div class="card" data-category="ages6-8 coding">
-        <img src="images/kenya-scratch.jpg" alt="Scratch game" class="card-image">
+        <img src="images/kenya-scratch.jpg" alt="Scratch game" class="card-image" loading="lazy">
         <h3>Make a Safari Game! 🦒</h3>
         <p>Drag blocks to create a game with lions and zebras using Scratch. Super easy!</p>
         <span class="difficulty">Super Easy 🌟</span>
@@ -71,7 +77,7 @@
       </div>
       <!-- Python Basics -->
       <div class="card" data-category="ages9-12 coding">
-        <img src="images/kenya-python.jpg" alt="Python game" class="card-image">
+        <img src="images/kenya-python.jpg" alt="Python game" class="card-image" loading="lazy">
         <h3>Code a Matatu Race Game! 🚐</h3>
         <p>Learn Python to make a fun racing game. For ages 9–12.</p>
         <span class="difficulty">Medium 🚀</span>
@@ -81,7 +87,7 @@
       </div>
       <!-- Web Development -->
       <div class="card" data-category="ages13-16 web">
-        <img src="images/kenya-web.jpg" alt="Website design" class="card-image">
+        <img src="images/kenya-web.jpg" alt="Website design" class="card-image" loading="lazy">
         <h3>Build a Website About Kenya 🇰🇪</h3>
         <p>Create a website about Kenyan heroes with HTML/CSS. For ages 13–16.</p>
         <span class="difficulty">Challenge 💡</span>
@@ -91,7 +97,7 @@
       </div>
       <!-- Robotics -->
       <div class="card" data-category="ages9-12 robots">
-        <img src="images/kenya-robotics.jpg" alt="Robotics project" class="card-image">
+        <img src="images/kenya-robotics.jpg" alt="Robotics project" class="card-image" loading="lazy">
         <h3>Code a Farmer’s Robot! 🌾</h3>
         <p>Use Micro:bit to make a robot for Kenyan farms. For ages 9–12.</p>
         <span class="difficulty">Medium 🚀</span>
@@ -113,12 +119,12 @@
         <a href="terms.html">Terms of Service</a>
       </div>
       <div class="footer-social">
-        <a href="https://facebook.com/techiesprouts" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/techiesprouts" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/techiesprouts" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com/techiesprouts" aria-label="Facebook" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/techiesprouts" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/techiesprouts" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
       </div>
-      <form class="newsletter-form" data-netlify="true" name="newsletter">
-        <input type="email" name="email" placeholder="Join our newsletter" aria-label="Newsletter email" required>
+      <form class="newsletter-form" data-netlify="true" name="newsletter" aria-label="Newsletter subscription form">
+        <input type="email" name="email" placeholder="Join our newsletter" aria-label="Enter email for newsletter" required>
         <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
       <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act">Kenya Data Protection Act Compliant</a></p>
@@ -127,59 +133,6 @@
   </footer>
 
   <!-- JavaScript -->
-  <script>
-    // Retracting Navigation
-    let lastScrollTop = 0;
-    const header = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-      if (window.innerWidth <= 768) {
-        let currentScrollTop = window.scrollY;
-        if (currentScrollTop > lastScrollTop) {
-          header.classList.add('header-hidden');
-        } else {
-          header.classList.remove('header-hidden');
-        }
-        lastScrollTop = currentScrollTop;
-      }
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        header.classList.remove('header-hidden');
-      }
-    });
-
-    // Language Toggle (Placeholder)
-    const languageSelect = document.getElementById('language');
-    languageSelect.addEventListener('change', (e) => {
-      console.log('Language changed to:', e.target.value);
-      // TODO: Implement language switch logic
-    });
-
-    // Search Functionality
-    const searchInput = document.querySelector('.search-bar input');
-    const courses = [
-      { title: "Scratch Coding", url: "Fun-Lessons.html#scratch" },
-      { title: "Python Basics", url: "Fun-Lessons.html#python" },
-      { title: "Web Development", url: "Fun-Lessons.html#web" },
-      { title: "Robotics", url: "Fun-Lessons.html#robotics" }
-    ];
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase();
-      const results = courses.filter(course => course.title.toLowerCase().includes(query));
-      console.log(results); // TODO: Display results in a dropdown
-    });
-
-    // Course Filter
-    function filterCourses(category) {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        if (card.dataset.category.includes(category)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-  </script>
+  <script defer src="js/scripts.js"></script>
 </body>
 </html>
