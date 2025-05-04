@@ -45,7 +45,8 @@ const courses = [
   { title: "Scratch Coding", url: "Fun-Lessons.html#scratch" },
   { title: "Python Basics", url: "Fun-Lessons.html#python" },
   { title: "Web Development", url: "Fun-Lessons.html#web" },
-  { title: "Digital Citizenship", url: "Fun-Lessons.html#digital-citizenship" }
+  { title: "Digital Citizenship", url: "Fun-Lessons.html#digital-citizenship" },
+  { title: "Robotics", url: "Fun-Lessons.html#robotics" } // Added for Fun-Lessons.html
 ];
 searchInput.addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase().trim();
@@ -72,3 +73,15 @@ document.addEventListener('click', (e) => {
     searchResults.classList.remove('active');
   }
 });
+
+// Course Filter (for Fun-Lessons.html)
+function filterCourses(category) {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    if (card.dataset.category.includes(category)) {
+      card.style.display = 'flex'; // Match card's display: flex
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
