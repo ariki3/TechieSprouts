@@ -36,6 +36,10 @@ h1 { font-size: 40px; }
 h2 { font-size: 28px; }
 h3 { font-size: 22px; }
 
+h1 span {
+  vertical-align: middle; /* Align emoji with text */
+}
+
 p {
   font-size: 18px;
   color: var(--text-dark);
@@ -63,8 +67,6 @@ p {
 .header-logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .site-logo {
@@ -88,8 +90,7 @@ p {
   border: 1px solid var(--primary-blue);
   border-radius: 4px;
   font-size: 14px;
-  width: 100%;
-  max-width: 120px;
+  max-width: 100px; /* Adjusted for better fit */
   text-align: center;
 }
 
@@ -100,8 +101,6 @@ p {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 800px;
 }
 
 .site-nav a {
@@ -120,6 +119,22 @@ p {
   color: #FFFFFF;
 }
 
+/* CTA Button */
+.cta-button {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0088B3; /* Darker shade of primary-blue */
+}
+
+/* Search Bar */
 .search-bar {
   display: flex;
   align-items: center;
@@ -146,4 +161,14 @@ p {
   text-align: center;
 }
 
-/* CTA
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .site-nav {
+    gap: 8px;
+  }
+
+  .site-nav a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+}
