@@ -28,7 +28,7 @@ body {
 h1, h2, h3 {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 600;
-  color: var(--primary-blue); /* Test with #00A1D6 if variable fails */
+  color: var(--primary-blue);
   text-align: center;
 }
 
@@ -180,34 +180,7 @@ p {
 }
 
 .kid-button:hover {
-  background-color: #6BB91E; /* Darker shade of --primary-green */
-}
-
-/* Search Bar */
-.search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-  border: 1px solid var(--primary-blue);
-  border-radius: 20px;
-  padding: 6px 12px;
-  max-width: 200px;
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.search-bar i {
-  color: var(--primary-blue);
-  margin-right: 8px;
-}
-
-.search-bar input {
-  border: none;
-  outline: none;
-  font-size: 14px;
-  width: 100%;
-  text-align: center;
+  background-color: #6BB91E;
 }
 
 /* Hero Section */
