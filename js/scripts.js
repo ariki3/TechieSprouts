@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && nav) {
     hamburger.addEventListener('click', () => {
       const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-      nav.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
     });
   } else {
     console.warn('Hamburger menu (.hamburger) or navigation (.site-nav) not found in the DOM.');
