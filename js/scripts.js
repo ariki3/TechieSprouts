@@ -53,3 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 });
+// Existing hamburger menu toggle (example, adjust if different)
+document.querySelector('.hamburger').addEventListener('click', function () {
+  const nav = document.querySelector('.site-nav');
+  const isExpanded = this.getAttribute('aria-expanded') === 'true';
+  nav.classList.toggle('active');
+  this.setAttribute('aria-expanded', !isExpanded);
+});
+
+// Dropdown toggle for mobile
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default link behavior
+    const dropdown = this.closest('.dropdown');
+    const isActive = dropdown.classList.contains('active');
+    dropdown.classList.toggle('active', !isActive);
+    this.setAttribute('aria-expanded', !isActive);
+  });
+});
