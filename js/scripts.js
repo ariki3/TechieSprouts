@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && nav) {
     console.log('Hamburger and nav found, attaching click event');
     hamburger.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent click from bubbling to document
+      e.stopPropagation();
       console.log('Hamburger clicked');
       const isExpanded = nav.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', isExpanded);
       hamburger.classList.toggle('open');
-      document.body.style.overflow = isExpanded ? 'hidden' : ''; // Prevent scrolling
+      document.body.style.overflow = isExpanded ? 'hidden' : '';
     });
 
     // Close menu when clicking a link
@@ -58,52 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
       }
     });
+
+    // Close menu on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
   } else {
     console.error('Hamburger (.hamburger) or navigation (.site-nav) not found.');
   }
-
-  // Dropdown Toggle for Mobile
-  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  if (dropdownToggles.length > 0) {
-    console.log('Dropdown toggles found:', dropdownToggles.length);
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          e.stopPropagation(); // Prevent click from closing menu
-          const dropdown = toggle.closest('.dropdown');
-          const isActive = dropdown.classList.contains('active');
-          // Close other dropdowns
-          document.querySelectorAll('.dropdown.active').forEach(d => {
-            if (d !== dropdown) {
-              d.classList.remove('active');
-              d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
-            }
-          });
-          dropdown.classList.toggle('active');
-          toggle.setAttribute('aria-expanded', !isActive);
-          console.log('Dropdown toggled, active:', !isActive);
-        }
-      });
-    });
-  } else {
-    console.warn('No dropdown toggles (.dropdown-toggle) found.');
-  }
-
-  // Course Filter
-  window.filterCourses = function(category) {
-    const cards = document.querySelectorAll('.card');
-    if (cards.length > 0) {
-      console.log('Filtering courses for category:', category);
-      cards.forEach(card => {
-        if (category === 'all' || card.dataset.category?.includes(category)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    } else {
-      console.warn('No course cards (.card) found.');
-    }
-  };
 });
