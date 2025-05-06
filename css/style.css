@@ -9,7 +9,7 @@
   --primary-blue: #005BEA; /* Matches Software Academy's primary blue */
   --secondary-blue: #E6F0FA; /* Light blue for backgrounds/hover */
   --primary-green: #7ED321; /* Retained for kid-button and kid-friendly elements */
-  --accent-orange: #F5A623; /* Matches Software Academy's accent */
+  --accent-orange: #F5A623; /* Matches Software Academy's accent, used for most CTA buttons */
   --neutral-gray: #F7F7F7; /* Matches Software Academy's background gray */
   --footer-gray: #EDEDED; /* Retained for footer */
   --text-dark: #333333; /* Matches Software Academy's text color */
@@ -142,7 +142,7 @@ p {
 
 /* CTA Button */
 .cta-button {
-  background-color: #FF007F; /* Hot Pink for CTA buttons */
+  background-color: var(--accent-orange); /* Vibrant Orange for most CTA buttons */
   color: #FFFFFF;
   padding: 8px 16px;
   border-radius: 4px;
@@ -152,6 +152,21 @@ p {
 }
 
 .cta-button:hover {
+  background-color: #D68F20; /* Darker orange for hover */
+}
+
+/* Hot Pink CTA Button (for specific buttons: Subscribe, Download Parent Guide, See Courses, Start Now) */
+.cta-button-pink {
+  background-color: #FF007F; /* Hot Pink */
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cta-button-pink:hover {
   background-color: #E60073; /* Darker Hot Pink for hover */
 }
 
