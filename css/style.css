@@ -6,10 +6,10 @@
 
 /* General Styling */
 :root {
-  --primary-blue: #005BEA; /* Updated to match Software Academy's primary blue */
+  --primary-blue: #005BEA; /* Matches Software Academy's primary blue */
   --secondary-blue: #E6F0FA; /* Light blue for backgrounds/hover */
   --primary-green: #7ED321; /* Retained for kid-button and kid-friendly elements */
-  --accent-orange: #F5A623; /* Matches Software Academy's accent and your existing orange */
+  --accent-orange: #F5A623; /* Matches Software Academy's accent */
   --neutral-gray: #F7F7F7; /* Matches Software Academy's background gray */
   --footer-gray: #EDEDED; /* Retained for footer */
   --text-dark: #333333; /* Matches Software Academy's text color */
@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Fixed syntax error */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--neutral-gray);
@@ -29,7 +29,7 @@ body {
 h1, h2, h3 {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 600;
-  color: var(--primary-blue);
+  color: #1E1F66; /* Updated to Deep Navy Blue for section titles */
   text-align: center;
 }
 
@@ -68,7 +68,7 @@ p {
 .header-logo {
   display: flex;
   align-items: center;
-  flex-shrink: 0; /* Ensures logo stays in place */
+  flex-shrink: 0;
 }
 
 .site-logo {
@@ -116,9 +116,9 @@ p {
 
 /* Navigation */
 .site-nav {
-  flex: 1; /* Takes available space to center content */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Centers navigation links */
+  justify-content: center;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
@@ -152,7 +152,7 @@ p {
 }
 
 .cta-button:hover {
-  background-color: #0044B3; /* Darker blue for hover, inspired by Software Academy */
+  background-color: #0044B3;
 }
 
 /* Kid Button (used in kids-corner.html) */
@@ -309,7 +309,7 @@ p {
 }
 
 .course-filters button:hover {
-  background-color: #0044B3; /* Darker blue for hover */
+  background-color: #0044B3;
 }
 
 /* Course Section (used in My-Learning.html) */
@@ -461,7 +461,7 @@ p {
     background-color: #FFFFFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 16px;
-    justify-content: flex-start; /* Aligns links vertically in mobile view */
+    justify-content: flex-start;
   }
 
   .site-nav.active {
