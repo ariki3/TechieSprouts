@@ -53,7 +53,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 16px 40px;
-  background-color: #FFFFFF;
+  background-color: #009CE0; /* Sky Blue */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -92,7 +92,7 @@ p {
   display: block;
   width: 24px;
   height: 3px;
-  background-color: var(--text-dark);
+  background-color: #FFFFFF; /* White for contrast on Sky Blue */
   position: relative;
 }
 
@@ -102,7 +102,7 @@ p {
   position: absolute;
   width: 24px;
   height: 3px;
-  background-color: var(--text-dark);
+  background-color: #FFFFFF; /* White for contrast */
   left: 0;
 }
 
@@ -125,7 +125,7 @@ p {
 }
 
 .site-nav a {
-  color: var(--text-dark);
+  color: #FFFFFF; /* White for contrast on Sky Blue */
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
@@ -133,6 +133,7 @@ p {
   transition: background-color 0.3s, color 0.3s;
   text-align: center;
   flex-shrink: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
 }
 
 .site-nav a:hover, .site-nav a.active {
@@ -147,7 +148,7 @@ p {
 }
 
 .dropdown-toggle {
-  color: var(--text-dark);
+  color: #FFFFFF; /* White for contrast on Sky Blue */
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
@@ -156,6 +157,7 @@ p {
   display: flex;
   align-items: center;
   gap: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
 }
 
 .dropdown-toggle:hover {
@@ -168,7 +170,7 @@ p {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: #FFFFFF; /* White for contrast */
   min-width: 160px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -188,15 +190,16 @@ p {
 
 .dropdown-menu a {
   display: block;
-  color: var(--text-dark);
+  color: var(--text-dark); /* Dark text for contrast on white */
   text-decoration: none;
   font-size: 14px;
   padding: 8px 16px;
   transition: background-color 0.3s;
+  text-shadow: none; /* No shadow needed on white background */
 }
 
 .dropdown-menu a:hover {
-  background-color: var(--secondary-blue);
+  background-color: var(--secondary-blue); /* Light blue hover */
   color: var(--text-dark);
 }
 
@@ -354,237 +357,4 @@ p {
 .progress-bar {
   background-color: var(--neutral-gray);
   height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 10px 0;
-}
-
-.progress {
-  background-color: var(--primary-green);
-  height: 100%;
-  transition: width 0.3s ease;
-}
-
-/* Course Filters (used in Fun-Lessons.html) */
-.course-filters {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.course-filters button {
-  background-color: var(--primary-blue);
-  color: #FFFFFF;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.course-filters button:hover {
-  background-color: #0044B3;
-}
-
-/* Course Section (used in My-Learning.html) */
-.course-section {
-  margin-top: 20px;
-  text-align: center;
-}
-
-/* Offline Links and Notes (used in Fun-Lessons.html) */
-.offline-link {
-  display: inline-block;
-  color: var(--primary-blue);
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.offline-link:hover {
-  text-decoration: underline;
-}
-
-.offline-note {
-  font-size: 14px;
-  color: var(--text-dark);
-  margin-top: 20px;
-}
-
-/* Consent Form (used in For-Parents.html) */
-.consent-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.consent-form label {
-  font-size: 16px;
-  color: var(--text-dark);
-  text-align: left;
-}
-
-.consent-form input {
-  padding: 8px;
-  border: 1px solid var(--primary-blue);
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-/* Privacy Section (used in privacy.html) */
-.privacy-section {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.privacy-section .card {
-  text-align: left;
-}
-
-.privacy-section ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--footer-gray);
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.footer-links a {
-  color: var(--text-dark);
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: var(--primary-blue);
-}
-
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.footer-social a {
-  color: var(--text-dark);
-  font-size: 20px;
-}
-
-.footer-social a:hover {
-  color: var(--primary-blue);
-}
-
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.newsletter-form input {
-  padding: 8px;
-  border: 1px solid var(--primary-blue);
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.coppa-note {
-  font-size: 14px;
-  color: var(--text-dark);
-}
-
-.coppa-note a {
-  color: var(--primary-blue);
-  text-decoration: none;
-}
-
-.coppa-note a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .site-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    justify-content: flex-start;
-  }
-
-  .site-nav.active {
-    display: flex;
-  }
-
-  .site-nav a {
-    font-size: 14px;
-    padding: 6px 8px;
-  }
-
-  /* Dropdown in Mobile */
-  .dropdown {
-    width: 100%;
-  }
-
-  .dropdown-toggle {
-    font-size: 14px;
-    padding: 6px 8px;
-    justify-content: space-between;
-  }
-
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    background-color: var(--neutral-gray);
-    box-shadow: none;
-    border-radius: 0;
-    padding: 8px 16px;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: none; /* Prevent hover on mobile */
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block; /* Show when toggled via JS */
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .hero-subtitle {
-    font-size: 18px;
-  }
-
-  .course-filters {
-    flex-wrap: wrap;
-  }
-}
+  border-radius: 5
