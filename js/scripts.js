@@ -37,21 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('Hamburger menu (.hamburger) or navigation (.site-nav) not found in the DOM.');
   }
 
-  // Language Toggle
-  const languageSelect = document.getElementById('language');
-  if (languageSelect) {
-    languageSelect.addEventListener('change', (e) => {
-      const lang = e.target.value;
-      if (lang === 'sw') {
-        window.location.href = 'index-sw.html';
-      } else {
-        window.location.href = 'index.html';
-      }
-    });
-  } else {
-    console.warn('Language select element (#language) not found in the DOM.');
-  }
-
   // Course Filter (for Fun-Lessons.html)
   window.filterCourses = function(category) {
     const cards = document.querySelectorAll('.card');
