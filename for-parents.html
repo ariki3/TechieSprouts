@@ -35,62 +35,47 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Help Your Child Learn Tech! 😊</h1>
-      <p class="hero-subtitle">See their progress and learn how to support them.</p>
+      <h1>Safe & Fun Tech for Your Kids! 🌟</h1>
+      <p class="hero-subtitle">Help your child learn coding and robotics with confidence.</p>
       <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
     </div>
   </section>
 
-  <!-- Parent Portal Section -->
+  <!-- Parents Section -->
   <section class="content-section">
-    <h2>For Parents (Coming Soon)</h2>
-    <p class="section-intro">Msaada Mtoto Wako Ajifunze Teknolojia! (Help Your Child Learn Tech!)</p>
+    <h2>Why Choose TechieSprouts?</h2>
     <div class="card-grid">
       <div class="card">
-        <i class="fas fa-chart-bar card-icon"></i>
-        <h3>Check Progress</h3>
-        <p>See how your child is doing in coding and tech.</p>
+        <h3>Safe Learning</h3>
+        <p>We protect your child’s data and follow strict privacy laws.</p>
+        <a href="privacy.html" class="cta-button" aria-label="Learn more about our Privacy Policy">Learn More</a>
       </div>
       <div class="card">
-        <i class="fas fa-envelope card-icon"></i>
-        <h3>Talk to Teachers</h3>
-        <p>Get updates from instructors.</p>
+        <h3>Fun Courses</h3>
+        <p>Kids make games and robots with Scratch, Python, and more!</p>
+        <a href="Fun-Lessons.html" class="cta-button" aria-label="Learn more about courses">Learn More</a>
       </div>
       <div class="card">
-        <i class="fas fa-calendar card-icon"></i>
-        <h3>Plan Lessons</h3>
-        <p>Choose the best lessons for your child.</p>
+        <h3>Parent Guides</h3>
+        <p>Get tips to support your child’s tech journey.</p>
+        <a href="downloads/parent-guide.pdf" class="cta-button cta-button-pink" aria-label="Download parent guide">Download Parent Guide</a>
       </div>
     </div>
   </section>
 
-  <!-- Tech for Parents Section -->
-  <section class="content-section">
-    <h2>Tech for Non-Tech Parents</h2>
-    <div class="card">
-      <h3>What is Coding?</h3>
-      <p>Coding is like telling a computer what to do. Kids make games and websites with it!</p>
-      <h3>Do We Need a Fancy Computer?</h3>
-      <p>No! A basic computer or tablet with internet works for most lessons.</p>
-      <h3>How Can I Help My Child?</h3>
-      <p>Encourage them to try our free lessons and ask questions!</p>
-      <a href="downloads/parent-guide.pdf" class="cta-button" aria-label="Download parent guide">Download Parent Guide</a>
-    </div>
-  </section>
-
-  <!-- Parental Consent Section -->
+  <!-- Consent Form Section -->
   <section class="content-section">
     <h2>Parental Consent</h2>
-    <div class="card">
-      <p>Allow your child to learn with TechieSprouts. See our <a href="privacy.html" class="privacy-link">Privacy Policy</a> for details.</p>
-      <form class="consent-form" data-netlify="true" name="parental-consent" aria-label="Parental consent form">
-        <label for="child-name">Child’s Name:</label>
-        <input type="text" id="child-name" name="child-name" required>
-        <label for="parent-email">Parent Email:</label>
-        <input type="email" id="parent-email" name="parent-email" required>
-        <button type="submit" class="cta-button" aria-label="Grant parental consent">Grant Consent</button>
-      </form>
-    </div>
+    <p class="section-intro">Sign up to let your child start learning!</p>
+    <form class="consent-form" data-netlify="true" name="consent" aria-label="Parental consent form">
+      <label for="child-name">Child’s Name or Nickname</label>
+      <input type="text" id="child-name" name="child-name" required aria-label="Enter child's name or nickname">
+      <label for="child-age">Child’s Age</label>
+      <input type="number" id="child-age" name="child-age" min="6" max="16" required aria-label="Enter child's age">
+      <label for="parent-email">Parent’s Email</label>
+      <input type="email" id="parent-email" name="parent-email" required aria-label="Enter parent's email">
+      <button type="submit" class="cta-button" aria-label="Submit parental consent">Submit Consent</button>
+    </form>
   </section>
 
   <!-- Footer -->
@@ -109,7 +94,7 @@
       </div>
       <form class="newsletter-form" data-netlify="true" name="newsletter" aria-label="Newsletter subscription form">
         <input type="email" name="email" placeholder="Join our newsletter" aria-label="Enter email for newsletter" required>
-        <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
+        <button type="submit" class="cta-button cta-button-pink" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
       <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act">Kenya Data Protection Act Compliant</a></p>
     </div>
