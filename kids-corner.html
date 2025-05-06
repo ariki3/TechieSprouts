@@ -19,15 +19,15 @@
   <header class="site-header" aria-label="Main navigation">
     <div class="header-logo">
       <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
-        <span class="hamburger-icon"></span>
-      </button>
     </div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="hamburger-icon"></span>
+    </button>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation" role="navigation">
       <a href="index.html">Home</a>
       <a href="kids-corner.html" class="active" aria-current="page">Kids’ Corner</a>
-      <div class="dropdown">
-        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">My Dashboard <i class="fas fa-chevron-down"></i></a>
+      <div class="dropdown" data-dropdown>
+        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>My Dashboard <i class="fas fa-chevron-down"></i></a>
         <ul class="dropdown-menu" aria-label="Dashboard submenu">
           <li><a href="My-Learning.html">My Learning</a></li>
           <li><a href="#my-badges">My Badges</a></li>
