@@ -623,3 +623,27 @@ p {
     flex-wrap: wrap;
   }
 }
+/* Hamburger Icon Animation */
+.hamburger.open .hamburger-icon {
+  background-color: transparent;
+}
+
+.hamburger.open .hamburger-icon::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .hamburger-icon::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Smooth Menu Transition */
+@media (max-width: 768px) {
+  .site-nav {
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+  }
+  .site-nav.active {
+    transform: translateY(0);
+    display: flex !important;
+  }
+}
