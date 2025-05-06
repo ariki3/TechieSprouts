@@ -30,11 +30,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger && nav) {
     hamburger.addEventListener('click', () => {
       const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', !isExpanded);
       nav.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', !isExpanded);
     });
   } else {
     console.warn('Hamburger menu (.hamburger) or navigation (.site-nav) not found in the DOM.');
+  }
+
+  // Dropdown Toggle for Mobile
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  if (dropdownToggles.length > 0) {
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        const dropdown = toggle.closest('.dropdown');
+        const isActive = dropdown.classList.contains('active');
+        dropdown.classList.toggle('active', !isActive);
+        toggle.setAttribute('aria-expanded', !isActive);
+      });
+    });
+  } else {
+    console.warn('No dropdown toggles (.dropdown-toggle) found in the DOM.');
   }
 
   // Course Filter (for Fun-Lessons.html)
@@ -52,22 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('No course cards (.card) found in the DOM for filtering.');
     }
   };
-});
-// Existing hamburger menu toggle (example, adjust if different)
-document.querySelector('.hamburger').addEventListener('click', function () {
-  const nav = document.querySelector('.site-nav');
-  const isExpanded = this.getAttribute('aria-expanded') === 'true';
-  nav.classList.toggle('active');
-  this.setAttribute('aria-expanded', !isExpanded);
-});
-
-// Dropdown toggle for mobile
-document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-  toggle.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default link behavior
-    const dropdown = this.closest('.dropdown');
-    const isActive = dropdown.classList.contains('active');
-    dropdown.classList.toggle('active', !isActive);
-    this.setAttribute('aria-expanded', !isActive);
-  });
 });
