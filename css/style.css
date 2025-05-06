@@ -72,11 +72,17 @@ p {
 }
 
 .site-logo {
-  width: 150px;
+  width: 100px; /* Reduced from 150px */
   height: auto;
   max-width: 100%;
   object-fit: contain;
   margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease; /* For hover effect */
+}
+
+.site-logo:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Hamburger Menu */
@@ -86,6 +92,7 @@ p {
   border: none;
   cursor: pointer;
   padding: 8px;
+  z-index: 1100; /* Ensure above nav */
 }
 
 .hamburger-icon {
@@ -94,6 +101,7 @@ p {
   height: 3px;
   background-color: #FFFFFF; /* White for contrast on Sky Blue */
   position: relative;
+  transition: background-color 0.3s;
 }
 
 .hamburger-icon::before,
@@ -104,6 +112,7 @@ p {
   height: 3px;
   background-color: #FFFFFF; /* White for contrast */
   left: 0;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .hamburger-icon::before {
@@ -544,10 +553,11 @@ p {
   }
 }
 
-/* General Responsive Adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    z-index: 1100; /* Ensure above nav */
   }
 
   .site-nav {
@@ -561,10 +571,11 @@ p {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 16px;
     justify-content: flex-start;
+    z-index: 1000; /* Ensure above content */
   }
 
   .site-nav.active {
-    display: flex;
+    display: flex !important; /* High specificity to override conflicts */
   }
 
   .site-nav a {
