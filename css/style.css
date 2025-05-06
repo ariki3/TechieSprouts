@@ -29,7 +29,7 @@ body {
 h1, h2, h3 {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 600;
-  color: #1E1F66; /* Updated to Deep Navy Blue for section titles */
+  color: #1E1F66; /* Deep Navy Blue for section titles */
   text-align: center;
 }
 
@@ -142,7 +142,7 @@ p {
 
 /* CTA Button */
 .cta-button {
-  background-color: var(--primary-blue);
+  background-color: #FF007F; /* Hot Pink for CTA buttons */
   color: #FFFFFF;
   padding: 8px 16px;
   border-radius: 4px;
@@ -152,7 +152,7 @@ p {
 }
 
 .cta-button:hover {
-  background-color: #0044B3;
+  background-color: #E60073; /* Darker Hot Pink for hover */
 }
 
 /* Kid Button (used in kids-corner.html) */
