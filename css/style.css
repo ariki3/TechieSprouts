@@ -140,6 +140,66 @@ p {
   color: #FFFFFF;
 }
 
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFFFFF;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--secondary-blue);
+  color: var(--text-dark);
+}
+
 /* CTA Button */
 .cta-button {
   background-color: var(--accent-orange); /* Vibrant Orange for most CTA buttons */
@@ -486,6 +546,34 @@ p {
   .site-nav a {
     font-size: 14px;
     padding: 6px 8px;
+  }
+
+  /* Dropdown in Mobile */
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    font-size: 14px;
+    padding: 6px 8px;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background-color: var(--neutral-gray);
+    box-shadow: none;
+    border-radius: 0;
+    padding: 8px 16px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none; /* Prevent hover on mobile */
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block; /* Show when toggled via JS */
   }
 
   h1 {
