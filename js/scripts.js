@@ -1,5 +1,7 @@
 // Ensure the DOM is fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded, initializing scripts'); // Debug: Confirm script runs
+
   // Retracting Navigation
   let lastScrollTop = 0;
   const header = document.querySelector('.site-header');
@@ -28,18 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.site-nav');
   if (hamburger && nav) {
+    console.log('Hamburger and nav found, attaching click event'); // Debug: Confirm elements
     hamburger.addEventListener('click', () => {
+      console.log('Hamburger clicked'); // Debug: Confirm click
       const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
       hamburger.setAttribute('aria-expanded', !isExpanded);
       nav.classList.toggle('active');
+      console.log('Nav active state:', nav.classList.contains('active')); // Debug: Confirm toggle
     });
   } else {
-    console.warn('Hamburger menu (.hamburger) or navigation (.site-nav) not found in the DOM.');
+    console.error('Hamburger menu (.hamburger) or navigation (.site-nav) not found in the DOM.');
   }
 
   // Dropdown Toggle for Mobile
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
   if (dropdownToggles.length > 0) {
+    console.log('Dropdown toggles found:', dropdownToggles.length); // Debug: Confirm dropdowns
     dropdownToggles.forEach(toggle => {
       toggle.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default link behavior
@@ -47,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isActive = dropdown.classList.contains('active');
         dropdown.classList.toggle('active', !isActive);
         toggle.setAttribute('aria-expanded', !isActive);
+        console.log('Dropdown toggled, active:', !isActive); // Debug: Confirm dropdown toggle
       });
     });
   } else {
@@ -57,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.filterCourses = function(category) {
     const cards = document.querySelectorAll('.card');
     if (cards.length > 0) {
+      console.log('Filtering courses for category:', category); // Debug: Confirm filter
       cards.forEach(card => {
         if (card.dataset.category && card.dataset.category.includes(category)) {
           card.style.display = 'flex';
