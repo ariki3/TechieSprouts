@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded, initializing scripts');
 
-  // Retracting Navigation (unchanged)
+  // Retracting Navigation
   let lastScrollTop = 0;
   const header = document.querySelector('.site-header');
   if (header) {
@@ -30,14 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.site-nav');
   if (hamburger && nav) {
     console.log('Hamburger and nav found, attaching click event');
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent click from bubbling to document
       console.log('Hamburger clicked');
       const isExpanded = nav.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', isExpanded);
-      hamburger.classList.toggle('open'); // For icon animation
-      // Prevent body scrolling when menu is open
-      document.body.style.overflow = isExpanded ? 'hidden' : '';
+      hamburger.classList.toggle('open');
+      document.body.style.overflow = isExpanded ? 'hidden' : ''; // Prevent scrolling
     });
+
+    // Close menu when clicking a link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('active')) {
@@ -57,11 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Dropdown toggles found:', dropdownToggles.length);
     dropdownToggles.forEach(toggle => {
       toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) { // Only on mobile
+        if (window.innerWidth <= 768) {
           e.preventDefault();
+          e.stopPropagation(); // Prevent click from closing menu
           const dropdown = toggle.closest('.dropdown');
           const isActive = dropdown.classList.contains('active');
-          // Close other open dropdowns
+          // Close other dropdowns
           document.querySelectorAll('.dropdown.active').forEach(d => {
             if (d !== dropdown) {
               d.classList.remove('active');
@@ -78,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('No dropdown toggles (.dropdown-toggle) found.');
   }
 
-  // Course Filter (unchanged)
+  // Course Filter
   window.filterCourses = function(category) {
     const cards = document.querySelectorAll('.card');
     if (cards.length > 0) {
