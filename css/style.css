@@ -1,7 +1,7 @@
 /*
  * TechieSprouts CSS Styles
  * Applies to HTML files: index.html, My-Learning.html, Fun-Lessons.html, For-Parents.html, For-Teachers.html, kids-corner.html, about.html, contact.html, privacy.html, terms.html
- * Last updated: May 3, 2025
+ * Last updated: May 6, 2025
  */
 
 /* General Styling */
@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font '\Poppins', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--neutral-gray);
@@ -110,22 +110,6 @@ p {
 
 .hamburger-icon::after {
   top: 8px;
-}
-
-/* Language Toggle */
-.language-toggle {
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.language-toggle select {
-  padding: 6px;
-  border: 1px solid var(--primary-blue);
-  border-radius: 4px;
-  font-size: 14px;
-  max-width: 100px;
-  text-align: center;
-  color: var(--text-dark);
 }
 
 /* Navigation */
@@ -462,11 +446,6 @@ p {
 
   .site-nav.active {
     display: flex;
-  }
-
-  .language-toggle,
-  .cta-button {
-    display: none;
   }
 
   .site-nav a {
