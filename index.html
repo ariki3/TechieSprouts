@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechieSprouts: Fun, safe tech courses for kids to learn coding, robotics, and more!">
-  <meta name="keywords" content="kids coding, tech education, Scratch, Python, robotics, Kenya">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com https://*.google.com;">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechieSprouts: Fun, safe tech courses for kids to learn coding, robotics, and more!" />
+  <meta name="keywords" content="kids coding, tech education, Scratch, Python, robotics, Kenya" />
+  <meta property="og:title" content="TechieSprouts - Fun Tech for Kids!" />
+  <meta property="og:description" content="Learn coding, robotics & more in a fun, safe space for kids." />
+  <meta property="og:image" content="https://yourdomain.com/images/preview.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com https://*.google.com;" />
   <title>TechieSprouts - Kids Coding</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header" aria-label="Main navigation">
+  <header class="site-header" role="banner">
     <div class="header-logo">
-      <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
+      <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy" />
     </div>
     <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
       <span class="hamburger-icon"></span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation" role="navigation">
+      <h2 class="visually-hidden">Site Navigation</h2>
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="Fun-Lessons.html">Fun Lessons</a>
       <a href="For-Parents.html">For Parents</a>
@@ -32,47 +38,49 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>TechieSprouts: Fun Tech for Kids! <span role="img" aria-label="Star">🌟</span></h1>
-      <p class="hero-subtitle">Learn coding, robotics, and more with games and projects!</p>
-      <div class="hero-ctas">
-        <a href="Fun-Lessons.html" class="cta-button cta-button-pink" aria-label="Start learning now">Start Now</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start free trial with TechieSprouts" rel="noopener noreferrer">Start Free Trial</a>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>TechieSprouts: Fun Tech for Kids! <span role="img" aria-label="Star">🌟</span></h1>
+        <p class="hero-subtitle">Learn coding, robotics, and more with games and projects!</p>
+        <div class="hero-ctas">
+          <a href="Fun-Lessons.html" class="cta-button cta-button-pink" aria-label="Start learning now">Start Now</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM68XckAW3cEkGOWYEoIwXUIP3Z0InP1kkrS2UboXdvKoAAQ/viewform?embedded=true" target="_blank" class="cta-button" aria-label="Start free trial with TechieSprouts" rel="noopener noreferrer">Start Free Trial</a>
+        </div>
+        <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
       </div>
-      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Intro Section -->
-  <section class="content-section">
-    <h2>Learn Tech!</h2>
-    <p class="section-intro">Kids can make games, websites, and robots while having fun!</p>
-    <div class="card-grid">
-      <div class="card">
-        <img src="images/kenya-scratch.jpg" alt="Kids coding with Scratch" class="card-image" loading="lazy">
-        <h3>Make Games</h3>
-        <p>Create a safari adventure with Scratch coding.</p>
-        <span class="difficulty">Super Easy 🌟</span>
+    <!-- Intro Section -->
+    <section class="content-section">
+      <h2>Learn Tech!</h2>
+      <p class="section-intro">Kids can make games, websites, and robots while having fun!</p>
+      <div class="card-grid">
+        <div class="card">
+          <img src="images/kenya-scratch.jpg" alt="Kids coding with Scratch" class="card-image" loading="lazy" />
+          <h3>Make Games</h3>
+          <p>Create a safari adventure with Scratch coding.</p>
+          <span class="difficulty">Super Easy 🌟</span>
+        </div>
+        <div class="card">
+          <img src="images/kenya-robotics.jpg" alt="Kids building robots" class="card-image" loading="lazy" />
+          <h3>Build Robots</h3>
+          <p>Code a robot to help farmers in Kenya.</p>
+          <span class="difficulty">Medium 🚀</span>
+        </div>
+        <div class="card">
+          <img src="images/kenya-web.jpg" alt="Kids designing websites" class="card-image" loading="lazy" />
+          <h3>Design Websites</h3>
+          <p>Build a webpage about Kenyan culture.</p>
+          <span class="difficulty">Challenge 💡</span>
+        </div>
       </div>
-      <div class="card">
-        <img src="images/kenya-robotics.jpg" alt="Kids building robots" class="card-image" loading="lazy">
-        <h3>Build Robots</h3>
-        <p>Code a robot to help farmers in Kenya.</p>
-        <span class="difficulty">Medium 🚀</span>
-      </div>
-      <div class="card">
-        <img src="images/kenya-web.jpg" alt="Kids designing websites" class="card-image" loading="lazy">
-        <h3>Design Websites</h3>
-        <p>Build a webpage about Kenyan culture.</p>
-        <span class="difficulty">Challenge 💡</span>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-content">
       <div class="footer-links">
         <a href="about.html">About</a>
@@ -85,8 +93,8 @@
         <a href="https://instagram.com/techiesprouts" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/techiesprouts" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
       </div>
-      <form class="newsletter-form" action="/subscribe" method="post">
-        <input type="email" name="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+      <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true">
+        <input type="email" name="email" placeholder="Enter your email" required aria-label="Email for newsletter" />
         <button type="submit" class="cta-button cta-button-pink" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
     </div>
