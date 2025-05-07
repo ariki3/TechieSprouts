@@ -1,7 +1,7 @@
 /*
  * TechieSprouts CSS Styles
  * Applies to HTML files: index.html, My-Learning.html, Fun-Lessons.html, For-Parents.html, For-Teachers.html, kids-corner.html, about.html, contact.html, privacy.html, terms.html
- * Last updated: May 6, 2025
+ * Last updated: May 7, 2025
  */
 
 /* General Styling */
@@ -78,7 +78,7 @@ p {
   max-width: 100%;
   object-fit: contain;
   margin: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0,  zero);
   transition: transform 0.3s ease; /* For hover effect */
 }
 
@@ -391,4 +391,5 @@ p {
 .progress {
   background-color: var(--primary-green);
   height: 100%;
-  transition: width
+  transition: width 0.3s ease; /* Completed with value and semicolon */
+}
