@@ -89,7 +89,7 @@ p {
 
 /* Hamburger Menu */
 .hamburger {
-  display: none;
+  display: none; /* Hidden by default, shown on mobile via media query */
   background: none;
   border: none;
   cursor: pointer;
@@ -376,4 +376,51 @@ p {
   background-color: var(--primary-green);
   height: 100%;
   transition: width 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 16px 20px; /* Slightly reduce padding for mobile */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile */
+  }
+
+  .site-nav {
+    display: none; /* Hide navigation by default on mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #009CE0; /* Match header background */
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure nav appears above other content */
+  }
+
+  .site-nav.active {
+    display: flex; /* Show navigation when hamburger is clicked */
+  }
+
+  .site-nav a {
+    padding: 12px;
+    font-size: 18px; /* Slightly larger for mobile readability */
+  }
+
+  .dropdown {
+    width: 100%; /* Full width for dropdown on mobile */
+  }
+
+  .dropdown-toggle {
+    justify-content: center; /* Center dropdown toggle text */
+  }
+
+  .dropdown-menu {
+    position: static; /* Prevent dropdown from being cut off */
+    width: 100%;
+    background-color: var(--secondary-blue); /* Slightly different bg for contrast */
+  }
 }
