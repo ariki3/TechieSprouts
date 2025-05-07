@@ -384,6 +384,10 @@ p {
   transition: width 0.3s ease;
 }
 
+.progress-width-50 {
+  width: 50%;
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .site-header {
