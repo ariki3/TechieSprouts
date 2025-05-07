@@ -1,22 +1,23 @@
 /*
  * TechieSprouts CSS Styles
- * Applies to HTML files: index.html, My-Learning.html, Fun-Lessons.html, For-Parents.html, For-Teachers.html, kids-corner.html, about.html, contact.html, privacy.html, terms.html
+ * Applies to all HTML pages
  * Last updated: May 7, 2025
  */
 
-/* General Styling */
+/* Root Colors */
 :root {
-  --primary-blue: #005BEA; /* Matches Software Academy's primary blue */
-  --secondary-blue: #E6F0FA; /* Light blue for backgrounds/hover */
-  --primary-green: #7ED321; /* Retained for kid-button and kid-friendly elements */
-  --accent-orange: #F5A623; /* Matches Software Academy's accent, used for most CTA buttons */
-  --neutral-gray: #F7F7F7; /* Matches Software Academy's background gray */
-  --footer-gray: #EDEDED; /* Retained for footer */
-  --text-dark: #333333; /* Matches Software Academy's text color */
-  --testimonial-bg: rgba(126, 211, 33, 0.1); /* Retained for green-based elements */
-  --badge-yellow: #FFD700; /* Retained for badges */
+  --primary-blue: #005BEA;
+  --secondary-blue: #E6F0FA;
+  --primary-green: #7ED321;
+  --accent-orange: #F5A623;
+  --neutral-gray: #F7F7F7;
+  --footer-gray: #EDEDED;
+  --text-dark: #333333;
+  --testimonial-bg: rgba(126, 211, 33, 0.1);
+  --badge-yellow: #FFD700;
 }
 
+/* Base Styles */
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   margin: 0;
@@ -29,7 +30,7 @@ body {
 h1, h2, h3 {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 600;
-  color: #1E1F66; /* Deep Navy Blue for section titles */
+  color: #1E1F66;
   text-align: center;
 }
 
@@ -47,13 +48,13 @@ p {
   text-align: center;
 }
 
-/* Site Header */
+/* Header */
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 40px;
-  background-color: #009CE0; /* Sky Blue */
+  background-color: #009CE0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -73,17 +74,17 @@ p {
 }
 
 .site-logo {
-  width: 100px; /* Reduced from 150px */
+  width: 100px;
   height: auto;
   max-width: 100%;
   object-fit: contain;
   margin: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0,  zero);
-  transition: transform 0.3s ease; /* For hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .site-logo:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);
 }
 
 /* Hamburger Menu */
@@ -93,7 +94,7 @@ p {
   border: none;
   cursor: pointer;
   padding: 8px;
-  z-index: 1100; /* Ensure above nav */
+  z-index: 1100;
   position: absolute;
   right: 20px;
   top: 50%;
@@ -104,7 +105,7 @@ p {
   display: block;
   width: 24px;
   height: 3px;
-  background-color: #FFFFFF; /* White for contrast on Sky Blue */
+  background-color: #FFFFFF;
   position: relative;
   transition: background-color 0.3s;
 }
@@ -115,18 +116,13 @@ p {
   position: absolute;
   width: 24px;
   height: 3px;
-  background-color: #FFFFFF; /* White for contrast */
+  background-color: #FFFFFF;
   left: 0;
   transition: transform 0.3s;
 }
 
-.hamburger-icon::before {
-  top: -8px;
-}
-
-.hamburger-icon::after {
-  top: 8px;
-}
+.hamburger-icon::before { top: -8px; }
+.hamburger-icon::after { top: 8px; }
 
 .hamburger.open .hamburger-icon {
   background-color: transparent;
@@ -151,7 +147,7 @@ p {
 }
 
 .site-nav a {
-  color: #FFFFFF; /* White for contrast on Sky Blue */
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
@@ -159,7 +155,7 @@ p {
   transition: background-color 0.3s, color 0.3s;
   text-align: center;
   flex-shrink: 0;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .site-nav a:hover, .site-nav a.active {
@@ -174,7 +170,7 @@ p {
 }
 
 .dropdown-toggle {
-  color: #FFFFFF; /* White for contrast on Sky Blue */
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
@@ -183,7 +179,7 @@ p {
   display: flex;
   align-items: center;
   gap: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-toggle:hover {
@@ -196,7 +192,7 @@ p {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #FFFFFF; /* White for contrast */
+  background-color: #FFFFFF;
   min-width: 160px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -216,59 +212,49 @@ p {
 
 .dropdown-menu a {
   display: block;
-  color: var(--text-dark); /* Dark text for contrast on white */
+  color: var(--text-dark);
   text-decoration: none;
   font-size: 14px;
   padding: 8px 16px;
   transition: background-color 0.3s;
-  text-shadow: none; /* No shadow needed on white background */
 }
 
 .dropdown-menu a:hover {
-  background-color: var(--secondary-blue); /* Light blue hover */
+  background-color: var(--secondary-blue);
   color: var(--text-dark);
 }
 
-/* CTA Button */
-.cta-button {
-  background-color: var(--accent-orange); /* Vibrant Orange for most CTA buttons */
-  color: #FFFFFF;
+/* Buttons */
+.cta-button,
+.cta-button-pink,
+.kid-button {
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
   font-size: 16px;
   transition: background-color 0.3s;
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+.cta-button {
+  background-color: var(--accent-orange);
 }
 
 .cta-button:hover {
-  background-color: #D68F20; /* Darker orange for hover */
+  background-color: #D68F20;
 }
 
-/* Hot Pink CTA Button (for specific buttons: Subscribe, Download Parent Guide, See Courses, Start Now) */
 .cta-button-pink {
-  background-color: #FF007F; /* Hot Pink */
-  color: #FFFFFF;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  background-color: #FF007F;
 }
 
 .cta-button-pink:hover {
-  background-color: #E60073; /* Darker Hot Pink for hover */
+  background-color: #E60073;
 }
 
-/* Kid Button (used in kids-corner.html) */
 .kid-button {
   background-color: var(--primary-green);
-  color: #FFFFFF;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
-  display: inline-block;
 }
 
 .kid-button:hover {
@@ -355,9 +341,7 @@ p {
   border-radius: 8px 8px 0 0;
 }
 
-/* Additional Styles for Specific Sections */
-
-/* Difficulty (used in index.html, Fun-Lessons.html) */
+/* Difficulty Label */
 .difficulty {
   display: block;
   font-size: 14px;
@@ -365,7 +349,7 @@ p {
   margin: 8px 0;
 }
 
-/* Badges (used in My-Learning.html) */
+/* Badges */
 .badges {
   display: flex;
   justify-content: center;
@@ -379,7 +363,7 @@ p {
   object-fit: contain;
 }
 
-/* Progress Bar (used in My-Learning.html) */
+/* Progress Bar */
 .progress-bar {
   background-color: var(--neutral-gray);
   height: 10px;
@@ -391,5 +375,5 @@ p {
 .progress {
   background-color: var(--primary-green);
   height: 100%;
-  transition: width 0.3s ease; /* Completed with value and semicolon */
+  transition: width 0.3s ease;
 }
