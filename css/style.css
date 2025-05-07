@@ -202,6 +202,12 @@ p {
   margin: 0;
 }
 
+/* Show dropdown menu when .dropdown is active (mobile toggle) */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Show dropdown menu on hover (desktop) */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -422,5 +428,13 @@ p {
     position: static; /* Prevent dropdown from being cut off */
     width: 100%;
     background-color: var(--secondary-blue); /* Slightly different bg for contrast */
+    padding: 8px 0; /* Consistent padding */
+    margin: 0;
+    border-radius: 0; /* Remove rounded corners for mobile */
+  }
+
+  .dropdown-menu a {
+    padding: 8px 24px; /* Indent dropdown items for hierarchy */
+    font-size: 16px; /* Slightly smaller than main nav links */
   }
 }
