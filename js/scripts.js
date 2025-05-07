@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM fully loaded, initializing scripts');
+  // console.log('DOM fully loaded, initializing scripts');
 
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.site-nav');
@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  console.log('Hamburger and nav found, attaching events');
+  // console.log('Hamburger and nav found, attaching events');
 
   // Menu Toggle Handlers
   ['click', 'touchstart'].forEach(evt =>
     hamburger.addEventListener(evt, (e) => {
+      if (evt === 'touchstart') e.preventDefault(); // Prevent duplicate triggers on touch
       e.stopPropagation();
-      console.log(`Hamburger ${evt} triggered`);
+      // console.log(`Hamburger ${evt} triggered`);
       toggleMenu();
     })
   );
@@ -26,12 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu)
   );
 
-  // Click outside to close menu
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('active')) {
-      closeMenu();
-    }
-  });
+  // Click or touch outside to close menu
+  ['click', 'touchstart'].forEach(evt =>
+    document.addEventListener(evt, (e) => {
+      if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('active')) {
+        closeMenu();
+      }
+    })
+  );
 
   // Resize handler to close menu on desktop view
   window.addEventListener('resize', debounce(() => {
@@ -40,19 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 150));
 
-  // Dropdown handlers
+  // Dropdown handlers (optional, can be removed if no dropdowns)
   dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('[data-dropdown-toggle]');
     const menu = dropdown.querySelector('.dropdown-menu');
 
     if (toggle && menu) {
-      console.log('Dropdown found, attaching events');
+      // console.log('Dropdown found, attaching events');
 
       ['click', 'touchstart'].forEach(evt =>
         toggle.addEventListener(evt, (e) => {
-          e.preventDefault();
+          if (evt === 'touchstart') e.preventDefault();
           e.stopPropagation();
-          console.log(`Dropdown toggle ${evt} triggered`);
+          // console.log(`Dropdown toggle ${evt} triggered`);
           toggleDropdown(dropdown, toggle);
         })
       );
