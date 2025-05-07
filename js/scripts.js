@@ -112,4 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const isActive = dropdown.classList.toggle('active');
     toggle.setAttribute('aria-expanded', isActive);
     // Close other open dropdowns
-    document.querySelectorAll('.
+    document.querySelectorAll('.dropdown.active').forEach(otherDropdown => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.classList.remove('active');
+        const otherToggle = otherDropdown.querySelector('[data-dropdown-toggle]');
+        if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  function closeDropdown(dropdown, toggle) {
+    dropdown.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+});
