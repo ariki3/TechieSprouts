@@ -47,7 +47,7 @@
   </section>
 
   <!-- Lesson Section -->
-  <section class="content-section">
+  <section class="content-section lesson-section">
     <h2>Safari Game Lesson</h2>
     <p class="section-intro">Follow this 30–45 minute lesson to create a game like the one below! It’s super easy for kids aged 6–8. 😊</p>
 
@@ -58,13 +58,13 @@
     <p><a href="https://scratch.mit.edu/projects/1183323124/" class="cta-button" target="_blank" rel="noopener noreferrer" aria-label="Play Safari Game demo">Play Demo</a></p>
 
     <!-- Lesson Details -->
-    <div class="card">
+    <div class="card lesson-card">
       <h3>Lesson: Build a Safari Game in Scratch</h3>
       <p><strong>Target Audience:</strong> Kids aged 6–8</p>
       <p><strong>Duration:</strong> 30–45 minutes</p>
       <p><strong>Objective:</strong> Learn basic Scratch coding by creating a game where a lion chases zebras.</p>
       <p><strong>Learning Outcomes:</strong></p>
-      <ul>
+      <ul class="lesson-list">
         <li>Understand Scratch’s drag-and-drop interface.</li>
         <li>Use motion, control, and variable blocks.</li>
         <li>Practice problem-solving and creativity.</li>
@@ -72,52 +72,55 @@
     </div>
 
     <!-- Lesson Outline -->
-    <div class="card">
+    <div class="card lesson-card">
       <h3>Lesson Outline</h3>
-      <h4>1. Introduction (5 minutes)</h4>
-      <p>Scratch is a fun way to code games using blocks! Watch the demo above to see the Safari Game. Your goal is to move a lion to catch zebras and score points.</p>
-      
-      <h4>2. Set Up (5 minutes)</h4>
-      <p>
-        <ol>
+      <div class="lesson-step">
+        <h4 class="lesson-step-title">Introduction</h4>
+        <p class="lesson-step-duration">5 minutes</p>
+        <p>Scratch is a fun way to code games using blocks! Watch the demo above to see the Safari Game. Your goal is to move a lion to catch zebras and score points.</p>
+      </div>
+      <div class="lesson-step">
+        <h4 class="lesson-step-title">Set Up</h4>
+        <p class="lesson-step-duration">5 minutes</p>
+        <ol class="lesson-step-list">
           <li>Go to <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">scratch.mit.edu</a> and click "Create".</li>
           <li>Name your project "Safari Game".</li>
           <li>Add a safari backdrop: Click the Stage, then "Choose a Backdrop", and pick "Savanna".</li>
           <li>Add sprites: Click "Choose a Sprite", add a Lion and two Zebras. Set Lion size to 50 and Zebras to 30.</li>
         </ol>
-      </p>
-      
-      <h4>3. Code the Lion (10 minutes)</h4>
-      <p>
-        <ol>
+      </div>
+      <div class="lesson-step">
+        <h4 class="lesson-step-title">Code the Lion</h4>
+        <p class="lesson-step-duration">10 minutes</p>
+        <ol class="lesson-step-list">
           <li>Select the Lion sprite.</li>
           <li>Drag these blocks to the Code area:
-            <ul>
+            <ul class="lesson-sub-list">
               <li><code>when green flag clicked</code></li>
               <li><code>go to x: 0 y: 0</code></li>
               <li><code>forever</code></li>
-              <li><code>if &lt;key [right arrow] pressed?&gt; then</code> with <code>change x by 10</code></li>
+              <li><code>if <key [right arrow] pressed?> then</code> with <code>change x by 10</code></li>
               <li>Repeat for left (<code>change x by -10</code>), up (<code>change y by 10</code>), and down (<code>change y by -10</code>).</li>
             </ul>
           </li>
           <li>Create a "Score" variable (in Variables) and add <code>set [Score] to 0</code> after <code>when green flag clicked</code>.</li>
           <li>Test by clicking the green flag and using arrow keys.</li>
         </ol>
-      </p>
-      
-      <h4>4. Code the Zebras (10 minutes)</h4>
-      <p>
-        <ol>
+      </div>
+      <div class="lesson-step">
+        <h4 class="lesson-step-title">Code the Zebras</h4>
+        <p class="lesson-step-duration">10 minutes</p>
+        <ol class="lesson-step-list">
           <li>Select a Zebra sprite.</li>
           <li>Drag these blocks:
-            <ul>
+            <ul class="lesson-sub-list">
               <li><code>when green flag clicked</code></li>
               <li><code>show</code></li>
               <li><code>go to random position</code></li>
               <li><code>forever</code></li>
               <li><code>move 5 steps</code></li>
               <li><code>if on edge, bounce</code></li>
-              <li><code>if &lt;touching [Lion]?&gt; then</code> with:
+              <li><code>if <touching [Lion]?> then</code> with:
                 <ul>
                   <li><code>hide</code></li>
                   <li><code>change [Score] by 1</code></li>
@@ -130,31 +133,31 @@
           <li>Copy the code to the other Zebra (drag to its Sprite pane or use the backpack).</li>
           <li>Test: Catch zebras with the lion to increase the score.</li>
         </ol>
-      </p>
-      
-      <h4>5. Add Sounds (5 minutes)</h4>
-      <p>
-        <ol>
+      </div>
+      <div class="lesson-step">
+        <h4 class="lesson-step-title">Add Sounds</h4>
+        <p class="lesson-step-duration">5 minutes</p>
+        <ol class="lesson-step-list">
           <li>For the Lion: Add <code>play sound [Roar] until done</code> after <code>when green flag clicked</code>.</li>
-          <li>For each Zebra: Add <code>play sound [Pop] until done</code> inside <code>if &lt;touching [Lion]?&gt; then</code>, before <code>hide</code>.</li>
+          <li>For each Zebra: Add <code>play sound [Pop] until done</code> inside <code>if <touching [Lion]?> then</code>, before <code>hide</code>.</li>
           <li>Test the sounds during gameplay.</li>
         </ol>
-      </p>
-      
-      <h4>6. Wrap-Up (5–10 minutes)</h4>
-      <p>
-        <ul>
+      </div>
+      <div class="lesson-step">
+        <h4 class="lesson-step-title">Wrap-Up</h4>
+        <p class="lesson-step-duration">5–10 minutes</p>
+        <ul class="lesson-list">
           <li>Play the game together and celebrate!</li>
           <li>Try changing the lion’s speed (e.g., <code>change x by 15</code>) or adding more zebras.</li>
           <li>Save: Click "File" > "Save to your computer".</li>
           <li>Share: Sign in to Scratch, click "Share", and send the link to friends.</li>
           <li>Download the <a href="downloads/scratch-guide.pdf" aria-label="Download Scratch guide">Scratch Guide PDF</a> for offline practice.</li>
         </ul>
-      </p>
+      </div>
     </div>
 
     <!-- Resources -->
-    <div class="card">
+    <div class="card lesson-card">
       <h3>Resources</h3>
       <p><strong>Scratch Guide PDF:</strong> <a href="downloads/scratch-guide.pdf" aria-label="Download Scratch guide">/downloads/scratch-guide.pdf</a></p>
       <p><strong>Demo Project:</strong> <a href="https://scratch.mit.edu/projects/1183323124/" target="_blank" rel="noopener noreferrer" aria-label="View Safari Game demo">scratch.mit.edu/projects/1183323124/</a></p>
