@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 150));
 
-  // Dropdown handlers (optional, can be removed if no dropdowns)
+  // Dropdown handlers
   dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('[data-dropdown-toggle]');
     const menu = dropdown.querySelector('.dropdown-menu');
@@ -68,6 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     }
   });
+
+  // Course Filter Functionality for Fun-Lessons.html
+  window.filterCourses = function(category) {
+    const cards = document.querySelectorAll('.card-grid .card');
+    cards.forEach(card => {
+      const categories = card.getAttribute('data-category').split(' ');
+      if (category === 'all' || categories.includes(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  };
 
   // Helper Functions
   function toggleMenu() {
