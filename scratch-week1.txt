@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechieSprouts: Learn to code a Safari Game with Scratch for kids aged 6–8!">
+  <meta name="keywords" content="kids coding, Scratch, safari game, tech education, Kenya">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.netlify.com https://*.google.com; frame-src 'self' https://scratch.mit.edu;">
+  <title>TechieSprouts - Safari Game Lesson</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-logo">
+      <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
+    </div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="hamburger-icon"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" role="navigation">
+      <a href="index.html">Home</a>
+      <a href="Fun-Lessons.html">Fun Lessons</a>
+      <div class="dropdown" data-dropdown>
+        <a href="#" class="dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true">Resources <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="For-Parents.html">For Parents</a></li>
+          <li><a href="For-Teachers.html">For Teachers</a></li>
+          <li><a href="kids-corner.html">Kids’ Corner</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Build a Safari Game in Scratch! <span role="img" aria-label="Giraffe">🦒</span></h1>
+      <p class="hero-subtitle">Learn to code a fun game where a lion chases zebras!</p>
+      <p class="safety-note">Kid-safe and <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy">Kenya Data Protection Act compliant</a></p>
+    </div>
+  </section>
+
+  <!-- Lesson Section -->
+  <section class="content-section">
+    <h2>Safari Game Lesson</h2>
+    <p class="section-intro">Follow this 30–45 minute lesson to create a game like the one below! It’s super easy for kids aged 6–8. 😊</p>
+
+    <!-- Embedded Scratch Demo -->
+    <div class="scratch-embed">
+      <iframe src="https://scratch.mit.edu/projects/1183323124/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://scratch.mit.edu/projects/1183323124/" class="cta-button" target="_blank" rel="noopener noreferrer" aria-label="Play Safari Game demo">Play Demo</a></p>
+
+    <!-- Lesson Details -->
+    <div class="card">
+      <h3>Lesson: Build a Safari Game in Scratch</h3>
+      <p><strong>Target Audience:</strong> Kids aged 6–8</p>
+      <p><strong>Duration:</strong> 30–45 minutes</p>
+      <p><strong>Objective:</strong> Learn basic Scratch coding by creating a game where a lion chases zebras.</p>
+      <p><strong>Learning Outcomes:</strong></p>
+      <ul>
+        <li>Understand Scratch’s drag-and-drop interface.</li>
+        <li>Use motion, control, and variable blocks.</li>
+        <li>Practice problem-solving and creativity.</li>
+      </ul>
+    </div>
+
+    <!-- Lesson Outline -->
+    <div class="card">
+      <h3>Lesson Outline</h3>
+      <h4>1. Introduction (5 minutes)</h4>
+      <p>Scratch is a fun way to code games using blocks! Watch the demo above to see the Safari Game. Your goal is to move a lion to catch zebras and score points.</p>
+      
+      <h4>2. Set Up (5 minutes)</h4>
+      <p>
+        <ol>
+          <li>Go to <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">scratch.mit.edu</a> and click "Create".</li>
+          <li>Name your project "Safari Game".</li>
+          <li>Add a safari backdrop: Click the Stage, then "Choose a Backdrop", and pick "Savanna".</li>
+          <li>Add sprites: Click "Choose a Sprite", add a Lion and two Zebras. Set Lion size to 50 and Zebras to 30.</li>
+        </ol>
+      </p>
+      
+      <h4>3. Code the Lion (10 minutes)</h4>
+      <p>
+        <ol>
+          <li>Select the Lion sprite.</li>
+          <li>Drag these blocks to the Code area:
+            <ul>
+              <li><code>when green flag clicked</code></li>
+              <li><code>go to x: 0 y: 0</code></li>
+              <li><code>forever</code></li>
+              <li><code>if &lt;key [right arrow] pressed?&gt; then</code> with <code>change x by 10</code></li>
+              <li>Repeat for left (<code>change x by -10</code>), up (<code>change y by 10</code>), and down (<code>change y by -10</code>).</li>
+            </ul>
+          </li>
+          <li>Create a "Score" variable (in Variables) and add <code>set [Score] to 0</code> after <code>when green flag clicked</code>.</li>
+          <li>Test by clicking the green flag and using arrow keys.</li>
+        </ol>
+      </p>
+      
+      <h4>4. Code the Zebras (10 minutes)</h4>
+      <p>
+        <ol>
+          <li>Select a Zebra sprite.</li>
+          <li>Drag these blocks:
+            <ul>
+              <li><code>when green flag clicked</code></li>
+              <li><code>show</code></li>
+              <li><code>go to random position</code></li>
+              <li><code>forever</code></li>
+              <li><code>move 5 steps</code></li>
+              <li><code>if on edge, bounce</code></li>
+              <li><code>if &lt;touching [Lion]?&gt; then</code> with:
+                <ul>
+                  <li><code>hide</code></li>
+                  <li><code>change [Score] by 1</code></li>
+                  <li><code>go to random position</code></li>
+                  <li><code>show</code></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Copy the code to the other Zebra (drag to its Sprite pane or use the backpack).</li>
+          <li>Test: Catch zebras with the lion to increase the score.</li>
+        </ol>
+      </p>
+      
+      <h4>5. Add Sounds (5 minutes)</h4>
+      <p>
+        <ol>
+          <li>For the Lion: Add <code>play sound [Roar] until done</code> after <code>when green flag clicked</code>.</li>
+          <li>For each Zebra: Add <code>play sound [Pop] until done</code> inside <code>if &lt;touching [Lion]?&gt; then</code>, before <code>hide</code>.</li>
+          <li>Test the sounds during gameplay.</li>
+        </ol>
+      </p>
+      
+      <h4>6. Wrap-Up (5–10 minutes)</h4>
+      <p>
+        <ul>
+          <li>Play the game together and celebrate!</li>
+          <li>Try changing the lion’s speed (e.g., <code>change x by 15</code>) or adding more zebras.</li>
+          <li>Save: Click "File" > "Save to your computer".</li>
+          <li>Share: Sign in to Scratch, click "Share", and send the link to friends.</li>
+          <li>Download the <a href="downloads/scratch-guide.pdf" aria-label="Download Scratch guide">Scratch Guide PDF</a> for offline practice.</li>
+        </ul>
+      </p>
+    </div>
+
+    <!-- Resources -->
+    <div class="card">
+      <h3>Resources</h3>
+      <p><strong>Scratch Guide PDF:</strong> <a href="downloads/scratch-guide.pdf" aria-label="Download Scratch guide">/downloads/scratch-guide.pdf</a></p>
+      <p><strong>Demo Project:</strong> <a href="https://scratch.mit.edu/projects/1183323124/" target="_blank" rel="noopener noreferrer" aria-label="View Safari Game demo">scratch.mit.edu/projects/1183323124/</a></p>
+      <p>Need help? Email us at <a href="mailto:daniru3@gmail.com" class="privacy-link">daniru3@gmail.com</a> or visit <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">scratch.mit.edu</a>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html" aria-label="View our Privacy Policy">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com/techiesprouts" aria-label="Facebook" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/techiesprouts" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/techiesprouts" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+      </div>
+      <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" aria-label="Newsletter subscription form">
+        <input type="email" name="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+        <button type="submit" class="cta-button cta-button-pink" aria-label="Subscribe to newsletter">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <script defer src="js/scripts.js"></script>
+</body>
+</html>
