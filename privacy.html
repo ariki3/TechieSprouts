@@ -10,25 +10,30 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/style.css?v=20250503">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header" aria-label="Main navigation">
+  <header class="site-header" role="banner">
     <div class="header-logo">
-      <img src="images/logo.png" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
-        <span class="hamburger-icon"></span>
-      </button>
+      <img src="images/logo.webp" alt="TechieSprouts Logo" class="site-logo" loading="lazy">
     </div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="hamburger-icon"></span>
+    </button>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation" role="navigation">
       <a href="index.html">Home</a>
       <a href="Fun-Lessons.html">Fun Lessons</a>
-      <a href="For-Parents.html">For Parents</a>
-      <a href="For-Teachers.html">For Teachers</a>
-      <a href="kids-corner.html">Kids’ Corner</a>
+      <div class="dropdown" data-dropdown>
+        <a href="#" class="dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true">Resources <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="For-Parents.html">For Parents</a></li>
+          <li><a href="For-Teachers.html">For Teachers</a></li>
+          <li><a href="kids-corner.html">Kids’ Corner</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -92,7 +97,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-content">
       <div class="footer-links">
         <a href="about.html">About</a>
@@ -105,16 +110,13 @@
         <a href="https://instagram.com/techiesprouts" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/techiesprouts" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
       </div>
-      <form class="newsletter-form" data-netlify="true" name="newsletter" aria-label="Newsletter subscription form">
-        <input type="email" name="email" placeholder="Join our newsletter" aria-label="Enter email for newsletter" required>
+      <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" aria-label="Newsletter subscription form">
+        <input type="email" name="email" placeholder="Enter your email" required aria-label="Email for newsletter">
         <button type="submit" class="cta-button cta-button-pink" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
-      <p class="coppa-note">Safe for Kids | <a href="privacy.html" class="privacy-link" aria-label="View our Privacy Policy compliant with Kenya Data Protection Act">Kenya Data Protection Act Compliant | Inspired by COPPA</a></p>
     </div>
-    <p>© 2025 TechieSprouts</p>
   </footer>
 
-  <!-- JavaScript -->
   <script defer src="js/scripts.js"></script>
 </body>
 </html>
